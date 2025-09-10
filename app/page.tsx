@@ -1,9 +1,11 @@
 import { InlineLink } from "@/components/link";
 import { paths } from "@/constants";
 import { Hero } from "@/components/hero";
-// import Link from "next/link";
+import { getBlogPosts } from "@/lib/blog";
+import Link from "next/link";
 
 export default async function Home() {
+  const posts = await getBlogPosts();
   return (
     <div className="mx-auto flex max-w-screen-md flex-col gap-12 px-6 pt-24 font-mono">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-4">
@@ -11,29 +13,29 @@ export default async function Home() {
         <Hero />
         <div className="group mt-12 flex max-w-prose flex-col gap-6">
           <h2 className="text-balance">
-            a biarritz-based <strong>product engineer</strong> with a keen eye
-            for design, crafting high impact{" "}
-            <strong>user-focused products</strong>.
+            un <strong>développeur web full-stack</strong> spécialisé front-end,
+            <br />
+            guidé par le plaisir de voir le design donner du sens à la tech
           </h2>
 
-          {/* <p className="text-balance">
-            currently building <InlineLink href={paths.shape}>shape</InlineLink>{' '}
-            & <InlineLink href={paths.deca}>deca</InlineLink>, and{' '}
-            <strong>having a blast</strong>.
-          </p> */}
+          <p className="text-balance">
+            contribuant à mettre l&rsquo;ergonomie, l&apos;innovation et
+            l&rsquo;esthétique au service de l&lsquo;
+            <strong>intérêt collectif</strong>
+          </p>
 
           <p>
-            always open to chat about evm, design, digital objects, community,
-            product dev, building for humans & more.
+            toujours chaud pour discuter de design, de SIG, de développement de
+            produit qui soit accessible à tous et pensées pour chacun
           </p>
         </div>
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">writing</h3>
+        <h3 className="text-accent mb-4 font-sans font-semibold">notes</h3>
 
         <ul className="flex flex-col gap-6">
-          {/* {posts.map((post) => (
+          {posts.map((post) => (
             <li key={post.slug}>
               <Link
                 href={paths.notes(post.slug)}
@@ -43,22 +45,23 @@ export default async function Home() {
                   {post.title}
                 </span>
                 <span className="text-muted-foreground">
-                  {post.description.replace(/\.$/, '')}
+                  {post.description.replace(/\.$/, "")}
                 </span>
               </Link>
             </li>
-          ))} */}
+          ))}
         </ul>
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">more</h3>
+        <h3 className="text-accent mb-4 font-sans font-semibold">plus</h3>
         <div className="flex flex-col gap-6">
           <p className="max-w-prose text-pretty">
-            you can reach me by{" "}
-            <InlineLink href={paths.email}>email</InlineLink>. my full resume is{" "}
-            <InlineLink href={paths.cv}>here</InlineLink> and you can see more
-            of my work on <InlineLink href={paths.github}>github</InlineLink>.
+            tu peux me contacter par{" "}
+            <InlineLink href={paths.email}>email</InlineLink>, mon cv complet
+            est visible <InlineLink href={paths.cv}>ici</InlineLink> et tu peux
+            découvrir mes projets sur{" "}
+            <InlineLink href={paths.github}>github</InlineLink>
           </p>
 
           <p>
