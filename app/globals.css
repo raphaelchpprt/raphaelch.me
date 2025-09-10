@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-gray-600);
+  --color-accent: var(--color-black);
+  --color-muted-foreground: var(--color-gray-400);
+  --color-muted-background: var(--color-gray-100);
+}
+
+@layer base {
+  .debug {
+    border: 1px solid red;
+  }
+}
+
+@layer utilities {
+  .font-sans {
+    font-family: var(--font-inter);
+  }
+
+  .font-mono {
+    font-family: var(--font-jetbrains);
+  }
+
+  /* .font-serif {
+    font-family: var(--font-cormorant-garamond);
+  } */
+}
+
+:root {
+  & strong {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+}
+
+body {
+  color: var(--color-foreground);
+  background: var(--color-background);
+}
