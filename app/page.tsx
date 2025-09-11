@@ -20,19 +20,20 @@ export default async function Home() {
 
           <p className="text-balance">
             contribuant à mettre l&rsquo;ergonomie, l&apos;innovation et
-            l&rsquo;esthétique au service de l&lsquo;
-            <strong>intérêt collectif</strong>
+            l&rsquo;esthétique au service de la société, de l&lsquo;
+            <strong>intérêt collectif</strong> et du bien commun
           </p>
 
           <p>
-            toujours chaud pour discuter de design, de SIG, de développement de
-            produit qui soit accessible à tous et pensées pour chacun
+            toujours partant pour discuter de design, de SIG,
+            <br />
+            de développement produit accessible à tous et pensées pour chacun
           </p>
         </div>
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">notes</h3>
+        <h3 className="text-accent mb-4 font-sans font-semibold">écrits</h3>
 
         <ul className="flex flex-col gap-6">
           {posts.map((post) => (
