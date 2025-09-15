@@ -81,8 +81,8 @@ export default async function Home() {
             applicative de données complexes à forte volumétrie
           </p>
           <p className="max-w-prose text-pretty">
-            aujourd&rsquo;hui, je mets ces compétences à profit pour contribuer
-            à la conception de produits visant à apporter des réponses tech aux
+            je mets aujourd&apos;hui ces compétences à profit pour contribuer à
+            la conception de produits visant à apporter des réponses tech aux
             problèmes que peut traverser la société avec comme objectif : être
             simples à la prise en main et naturel à l&rsquo;utilisation
           </p>
@@ -91,8 +91,7 @@ export default async function Home() {
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">stacks</h3>
         <div className="flex flex-col gap-6">
-          {" "}
-          <p className="flex max-w-prose items-center text-pretty">
+          <div className="flex max-w-prose items-center text-pretty">
             <div className="mr-4 flex items-center space-x-2">
               <StackIcon icon={ReactIcon} />
               <span>react</span>
@@ -112,8 +111,8 @@ export default async function Home() {
               <StackIcon icon={MaterialUiIcon} />
               <span>materialUi</span>
             </div>
-          </p>
-          <p className="flex max-w-prose items-center space-x-4 text-pretty">
+          </div>
+          <div className="flex max-w-prose items-center space-x-4 text-pretty">
             <div className="flex items-center space-x-2">
               <StackIcon icon={NodeIcon} />
               <span>node</span>
@@ -130,7 +129,7 @@ export default async function Home() {
               <StackIcon icon={FigmaIcon} />
               <span>figma</span>
             </div>
-          </p>
+          </div>
         </div>
       </div>
       <div>
