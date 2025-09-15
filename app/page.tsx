@@ -15,7 +15,6 @@ import {
 } from "@/components/icons";
 import { paths } from "@/constants";
 import { getBlogPosts } from "@/lib/blog";
-
 import Link from "next/link";
 
 export default async function Home() {
@@ -36,8 +35,8 @@ export default async function Home() {
 
         <div className="group mt-12 flex max-w-prose flex-col gap-6">
           <h2 className="text-balance">
-            un <strong>développeur full-stack</strong> basé à biarritz avec un
-            intérêt marqué pour le design qui conçoit des{" "}
+            un <strong>développeur fullstack</strong> basé à biarritz avec un
+            intérêt marqué pour le design, qui conçoit des{" "}
             <strong>produits pensés pour l’utilisateur</strong>
           </h2>
 
