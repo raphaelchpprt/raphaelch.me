@@ -1,7 +1,7 @@
 "use client";
 
 import { ElementType } from "react";
-import { GithubIcon } from "@/components/icons";
+import { GithubIcon, MaltIcon, LinkedInIcon } from "@/components/icons";
 import { FC } from "react";
 import { paths } from "@/constants";
 import { Link } from "@/components/link";
@@ -39,6 +39,8 @@ export const Hero: FC = () => {
         transition={{ duration: 0.2, delay: 0.15 }}
       >
         <SocialLink href={paths.github} icon={GithubIcon} />
+        <SocialLink href={paths.linkedin} icon={LinkedInIcon} />
+        <SocialLink href={paths.malt} icon={MaltIcon} />
       </motion.ul>
     </div>
   );
