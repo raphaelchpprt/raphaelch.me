@@ -13,7 +13,8 @@ export const Link = ({ href, children, className }: LinkProps) => {
   const isExternal =
     href.startsWith("http") ||
     href.startsWith("www") ||
-    href.startsWith("mailto:");
+    href.startsWith("mailto:") ||
+    href.startsWith("/cv-");
 
   if (isExternal) {
     return (
