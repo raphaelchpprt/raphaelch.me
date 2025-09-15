@@ -13,21 +13,23 @@ export default async function Home() {
         <Hero />
         <div className="group mt-12 flex max-w-prose flex-col gap-6">
           <h2 className="text-balance">
-            un <strong>développeur web full-stack</strong> spécialisé front-end,
+            un <strong>développeur full-stack</strong> attentif à l&rsquo;
+            <strong>expérience utilisateur</strong>,
             <br />
             guidé par le plaisir de voir le design donner du sens à la tech
           </h2>
 
           <p className="text-balance">
-            contribuant à mettre l&rsquo;ergonomie, l&apos;innovation et
-            l&rsquo;esthétique au service de la société, de l&lsquo;
+            contribuant à mettre l&rsquo;ergonomie, l&rsquo;innovation et
+            l&rsquo;esthétique au service de l&rsquo;
             <strong>intérêt collectif</strong> et du bien commun
           </p>
 
           <p>
             toujours partant pour discuter de design, de SIG,
+            <br /> de green & low-tech, de développement produit utile à tous
             <br />
-            de développement produit accessible à tous et pensées pour chacun
+            et pensé pour chacun
           </p>
         </div>
       </div>
@@ -53,25 +55,30 @@ export default async function Home() {
           ))}
         </ul>
       </div>
-
+      <div>
+        <h3 className="text-accent mb-4 font-sans font-semibold">à propos</h3>
+        <div className="flex flex-col gap-6">
+          <p className="max-w-prose text-pretty"></p>
+        </div>
+      </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">plus</h3>
         <div className="flex flex-col gap-6">
           <p className="max-w-prose text-pretty">
             tu peux me contacter par{" "}
             <InlineLink href={paths.email}>email</InlineLink>, mon cv complet
-            est visible <InlineLink href={paths.cv}>ici</InlineLink> et tu peux
-            découvrir mes projets sur{" "}
+            s&rsquo;affiche <InlineLink href={paths.cv}>ici</InlineLink> et tu
+            peux consulter mes projets sur{" "}
             <InlineLink href={paths.github}>github</InlineLink>
           </p>
 
           <p>
-            {/* <InlineLink
+            <InlineLink
               href={paths.repo}
               className="text-muted-foreground font-normal"
             >
-              source code
-            </InlineLink> */}
+              source_code
+            </InlineLink>
           </p>
         </div>
       </div>
