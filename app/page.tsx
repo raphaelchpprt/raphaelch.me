@@ -1,9 +1,7 @@
 import { ElementType } from "react";
 import { InlineLink } from "@/components/link";
-import { paths } from "@/constants";
-import { Hero } from "@/components/hero";
-import { getBlogPosts } from "@/lib/blog";
 import { SpinningText } from "@/components/spinning-text";
+import { Hero } from "@/components/hero";
 import {
   ReactIcon,
   NextIcon,
@@ -15,6 +13,9 @@ import {
   PostgresqlIcon,
   FigmaIcon,
 } from "@/components/icons";
+import { paths } from "@/constants";
+import { getBlogPosts } from "@/lib/blog";
+
 import Link from "next/link";
 
 export default async function Home() {
