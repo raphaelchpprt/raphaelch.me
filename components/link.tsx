@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils';
-import { ReactNode } from 'react';
-import NextLink from 'next/link';
-import { LinkProps as NextLinkProps } from 'next/link';
+import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
+import NextLink from "next/link";
+import { LinkProps as NextLinkProps } from "next/link";
 
 type LinkProps = NextLinkProps & {
   href: string;
@@ -10,7 +10,10 @@ type LinkProps = NextLinkProps & {
 };
 
 export const Link = ({ href, children, className }: LinkProps) => {
-  const isExternal = href.startsWith('http') || href.startsWith('www');
+  const isExternal =
+    href.startsWith("http") ||
+    href.startsWith("www") ||
+    href.startsWith("mailto:");
 
   if (isExternal) {
     return (
@@ -40,8 +43,8 @@ export const InlineLink = ({
     <Link
       href={href}
       className={cn(
-        'text-accent font-semibold underline hover:no-underline',
-        className
+        "text-accent font-semibold underline hover:no-underline",
+        className,
       )}
     >
       {children}
