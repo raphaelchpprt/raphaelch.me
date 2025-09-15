@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Golos_Text, JetBrains_Mono } from "next/font/google";
+import { Golos_Text, JetBrains_Mono, DM_Serif_Display } from "next/font/google";
+import { Footer } from "@/components/footer";
 import "./globals.css";
 
 const sans = Golos_Text({
@@ -13,6 +14,12 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-mono",
+});
+
+const serif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -31,12 +38,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-black">
       <body
-        className={`${sans.variable} ${mono.variable} relative antialiased`}
+        className={`${sans.variable} ${mono.variable} ${serif.variable} relative antialiased`}
       >
         <main className="bg-background relative z-10 min-h-screen pb-24">
           {children}
         </main>
-        {/* <Footer /> */}
+        <Footer />
         <Analytics />
       </body>
     </html>

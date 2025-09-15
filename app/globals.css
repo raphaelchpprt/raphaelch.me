@@ -24,9 +24,10 @@
     font-family: var(--font-mono);
   }
 
-  /* .font-serif {
-    font-family: var(--font-cormorant-garamond);
-  } */
+  .font-serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
 }
 
 :root {
