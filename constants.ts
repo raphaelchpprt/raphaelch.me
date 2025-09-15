@@ -5,7 +5,7 @@ export const paths = {
   // external
   github: "https://github.com/raphaelchpprt",
   repo: "https://github.com/raphaelchpprt/raphaelch.me",
-  linkedin: "www.linkedin.com/in/raphaelchappert",
+  linkedin: "https://www.linkedin.com/in/raphaelchappert",
   malt: "https://www.malt.fr/profile/raphaelchappert",
   email: "mailto:hi@raphaelch.me",
   cv: "/cv-raphael-chappert-software-developer.pdf",
