@@ -36,14 +36,15 @@ export default async function Home() {
         <div className="group mt-12 flex max-w-prose flex-col gap-6">
           <h2 className="text-balance">
             un <strong>développeur fullstack</strong> basé à biarritz avec un
-            intérêt marqué pour le design et des{" "}
-            <strong>produits pensés pour l’utilisateur</strong>
+            intérêt marqué pour le design et les{" "}
+            <strong>produits centrés utilisateur</strong>
           </h2>
 
           <p className="text-balance">
             cherchant à mettre la technologie, la créativité, l&apos;ergonomie
-            et l&rsquo;innovation au service de l&rsquo;
-            <strong>intérêt collectif</strong> et de la société
+            et l&rsquo;innovation{" "}
+            <strong>au service de l&rsquo; intérêt collectif</strong> et de la
+            société
           </p>
 
           <p>
@@ -73,32 +74,6 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-      </div>
-      <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">parcours</h3>
-        <div className="flex flex-col gap-6">
-          <p className="max-w-prose text-pretty">
-            ces 4 dernières années, j’ai eu la chance de contribuer au
-            développement d&rsquo;une <strong>plateforme saas</strong> portée
-            par une startup qui réalise les bilans et stratégies carbone
-            d&rsquo;entreprises privées, d&rsquo;ONG, d&rsquo;agences des
-            nations unies et de l&rsquo;union européenne
-          </p>
-          <p className="max-w-prose text-pretty">
-            en tant qu&rsquo;ingénieur produit au sein de l&rsquo;équipe tech,
-            j&apos;ai participé à la création de fonctionnalités front et
-            back-end, mettant l&apos;accent sur l&apos;
-            <strong>expérience utilisateur</strong> afin d&rsquo;optimiser une
-            gestion applicative de données complexes à forte volumétrie
-          </p>
-          <p className="max-w-prose text-pretty">
-            je me consacre aujourd’hui à la conception de produits visant à{" "}
-            <strong>apporter des réponses</strong> aux problèmes sociaux,
-            écologiques ou numériques que peut traverser la société, avec comme
-            objectif : être simples à la prise en main, naturels à
-            l&rsquo;utilisation et agréables au ressenti
-          </p>
-        </div>
       </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">stacks</h3>
@@ -142,6 +117,34 @@ export default async function Home() {
           </p>
         </div>
       </div>
+      <div>
+        <h3 className="text-accent mb-4 font-sans font-semibold">parcours</h3>
+        <div className="flex flex-col gap-6">
+          <p className="max-w-prose text-pretty">
+            après un master en relations internationales, j&apos;ai travaillé
+            plusieurs années au sein d&apos;organisations (onu, ong) en tant que
+            chargé de communication web/digitale
+          </p>
+          <p className="max-w-prose text-pretty">
+            je me suis ensuite réorienté vers le développement web avec un
+            bootcamp et j&apos;ai rejoint une startup greentech où j&apos;ai
+            contribué pendant 4 ans à la conception d&apos;un saas de bilan
+            carbone
+          </p>
+          {/* <p className="max-w-prose text-pretty">
+            j&apos;ai alors transformé{" "}
+            <strong>des connaissances en compétences</strong>, après un master
+            en relations internationales spécialité environnement, un bootcamp
+            chez thp, et diverses expériences en communication
+            </p> */}
+          <p className="max-w-prose text-pretty">
+            aujourd&apos;hui, j&apos;aide à développer des produits tech pensés
+            aussi bien pour l&apos;utilisateur que pour répondre aux défis
+            sociaux, écologiques et numériques
+          </p>
+        </div>
+      </div>
+
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">plus</h3>
         <div className="flex flex-col gap-6">
