@@ -24,11 +24,6 @@ export async function getBlogPostMetadata(slug: string): Promise<Metadata> {
 export const POSTS = [
   {
     title:
-      "Pourquoi l’expérience utilisateur est politique (et pas seulement esthétique)",
-    slug: "experience-utilisateur-politique",
-  },
-  {
-    title:
       "Du carbone au code : ce que m’a appris la greentech sur le rôle du développeur",
     slug: "carbone-code-role-developpeur",
   },
