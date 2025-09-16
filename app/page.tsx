@@ -36,14 +36,14 @@ export default async function Home() {
         <div className="group mt-12 flex max-w-prose flex-col gap-6">
           <h2 className="text-balance">
             un <strong>développeur fullstack</strong> basé à biarritz avec un
-            intérêt marqué pour le design, qui conçoit des{" "}
+            intérêt marqué pour le design et des{" "}
             <strong>produits pensés pour l’utilisateur</strong>
           </h2>
 
           <p className="text-balance">
-            contribuant à mettre l&rsquo;ergonomie, la créativité et
-            l&rsquo;innovation au service de l&rsquo;
-            <strong>intérêt collectif</strong> et du bien commun
+            cherchant à mettre la technologie, la créativité, l&apos;ergonomie
+            et l&rsquo;innovation au service de l&rsquo;
+            <strong>intérêt collectif</strong> et de la société
           </p>
 
           <p>
@@ -93,10 +93,10 @@ export default async function Home() {
           </p>
           <p className="max-w-prose text-pretty">
             je me consacre aujourd’hui à la conception de produits visant à{" "}
-            <strong>apporter des réponses</strong> tech aux problèmes sociaux,
+            <strong>apporter des réponses</strong> aux problèmes sociaux,
             écologiques ou numériques que peut traverser la société, avec comme
-            objectif : être simples à la prise en main et naturels à
-            l&rsquo;utilisation
+            objectif : être simples à la prise en main, naturels à
+            l&rsquo;utilisation et agréables au ressenti
           </p>
         </div>
       </div>
