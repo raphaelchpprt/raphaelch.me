@@ -17,6 +17,18 @@ import { paths } from "@/constants";
 import { getBlogPosts } from "@/lib/blog";
 import Link from "next/link";
 
+const stacks: { label: string; icon: ElementType }[] = [
+  { label: "react", icon: ReactIcon },
+  { label: "next", icon: NextIcon },
+  { label: "typescript", icon: TypescriptIcon },
+  { label: "tailwind", icon: TailwindIcon },
+  { label: "materialui", icon: MaterialUiIcon },
+  { label: "node", icon: NodeIcon },
+  { label: "mongodb", icon: MongodbIcon },
+  { label: "postgresql", icon: PostgresqlIcon },
+  { label: "figma", icon: FigmaIcon },
+];
+
 export default async function Home() {
   const posts = await getBlogPosts();
   return (
@@ -41,9 +53,9 @@ export default async function Home() {
           </h2>
 
           <p className="text-balance">
-            cherchant à mettre la technologie, la créativité, l&apos;ergonomie
+            désireux de mettre la technologie, la créativité, l&apos;ergonomie
             et l&rsquo;innovation{" "}
-            <strong>au service de l&rsquo; intérêt collectif</strong> et de la
+            <strong>au service de l&rsquo;intérêt collectif</strong> et de la
             société
           </p>
 
@@ -55,7 +67,7 @@ export default async function Home() {
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">écrits</h3>
+        <h3 className="text-accent mb-4 font-sans font-semibold">notes</h3>
 
         <ul className="flex flex-col gap-6">
           {posts.map((post) => (
@@ -79,41 +91,12 @@ export default async function Home() {
         <h3 className="text-accent mb-4 font-sans font-semibold">stacks</h3>
         <div className="flex flex-col gap-6">
           <p className="flex max-w-prose flex-wrap leading-loose text-pretty">
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={ReactIcon} />
-              <span>react</span>
-            </span>
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={NextIcon} /> <span>next</span>
-            </span>
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={TypescriptIcon} />
-              <span>typescript</span>
-            </span>
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={TailwindIcon} />
-              <span>tailwind</span>
-            </span>
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={MaterialUiIcon} />
-              <span>materialui</span>
-            </span>
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={NodeIcon} />
-              <span>node</span>
-            </span>
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={MongodbIcon} />
-              <span>mongodb</span>
-            </span>
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={PostgresqlIcon} />
-              <span>postgresql</span>
-            </span>
-            <span className="mr-4 flex items-center space-x-2">
-              <StackIcon icon={FigmaIcon} />
-              <span>figma</span>
-            </span>
+            {stacks.map(({ label, icon }) => (
+              <span key={label} className="mr-4 flex items-center space-x-2">
+                <StackIcon icon={icon} />
+                <span>{label}</span>
+              </span>
+            ))}
           </p>
         </div>
       </div>
@@ -123,7 +106,7 @@ export default async function Home() {
           <p className="max-w-prose text-pretty">
             après un master en relations internationales, j&apos;ai travaillé
             plusieurs années au sein d&apos;organisations (onu, ong) en tant que
-            chargé de communication web/digitale
+            chargé de communication web et digitale
           </p>
           <p className="max-w-prose text-pretty">
             je me suis ensuite réorienté vers le développement web avec un
@@ -131,12 +114,6 @@ export default async function Home() {
             contribué pendant 4 ans à la conception d&apos;un saas de bilan
             carbone
           </p>
-          {/* <p className="max-w-prose text-pretty">
-            j&apos;ai alors transformé{" "}
-            <strong>des connaissances en compétences</strong>, après un master
-            en relations internationales spécialité environnement, un bootcamp
-            chez thp, et diverses expériences en communication
-            </p> */}
           <p className="max-w-prose text-pretty">
             aujourd&apos;hui, j&apos;aide à développer des produits tech pensés
             aussi bien pour l&apos;utilisateur que pour répondre aux défis
@@ -144,7 +121,6 @@ export default async function Home() {
           </p>
         </div>
       </div>
-
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">plus</h3>
         <div className="flex flex-col gap-6">
