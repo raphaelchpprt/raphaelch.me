@@ -26,8 +26,13 @@ export const metadata: Metadata = {
   title: "raphaelch.me",
   description:
     "Concepteur d’expériences digitales alliant design, ergonomie et accessibilité, j’accompagne les projets à impact positif dans la tech, la RSE et la transition énergétique.",
-  icons:
-    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛵️</text></svg>",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
