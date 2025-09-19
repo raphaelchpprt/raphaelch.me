@@ -9,108 +9,56 @@ export const metadata = {
   publish: true,
 };
 
-Derrière ce titre se cache un glissement progressif dans ma manière de travailler : passer d’un logiciel pensé comme une somme de fonctionnalités à un produit pensé comme une somme d’effets, y compris écologiques
+---
 
-Après quelques années passées à construire dans la greentech, je vois mieux les coûts cachés : la requête de trop sur un réseau fragile, l’image surdimensionnée, la dépendance “pratique” mais lourde, l’écran superflu qui pousse l’utilisateur à faire trois actions plutôt qu’une.
+Quand j’ai commencé à travailler dans la greentech, je voyais encore le code comme une matière “technique”, presque abstraite. Rapidement, j’ai compris qu’il n’était jamais neutre. Chaque choix a une incidence : sur l’énergie consommée, sur le matériel sollicité, sur l’attention demandée aux utilisateurs.  
 
-Rien de spectaculaire séparément, mais additionné à l’échelle d’un service, cela devient un impact mesurable sur l’énergie, les terminaux, l’infrastructure et, au final, sur l’expérience perçue.
+Cette idée m’a conduit à envisager le développement autrement : non plus comme un simple exercice de construction de fonctionnalités, mais comme une suite de décisions qui façonnent à la fois le produit et son empreinte.  
 
 ---
 
-<em>
-  Concevoir un produit utile, c’est penser en même temps ergonomie, performance
-  et sobriété. Les trois se renforcent : ce qui est compréhensible et rapide est
-  souvent, mécaniquement, plus frugal en données et en calcul.
-</em>
+*Et au-delà de la diversité des appareils, il y a aussi celle des capacités humaines et des situations de vie. L’accessibilité, les contraintes réseau ou cognitives mériteraient à elles seules un autre billet.*  
 
 ---
 
-### Le mythe du “local optimum”
+## Le code laisse une trace  
 
-J’ai longtemps cru que l’optimisation se jouait dans les détails locaux : compresser une image ici, mémoriser une fonction là, activer du <a href="https://developer.mozilla.org/fr/docs/Web/Performance/Lazy_loading" target="_blank" rel="noreferrer">lazy‑loading</a> ailleurs.
+Un bouton “en plus”, un script chargé par défaut, une animation mal optimisée : autant de petits choix qui alourdissent l’ensemble. Rien de dramatique à l’échelle d’un prototype. Mais quand un service prend de l’ampleur, ces détails deviennent des tonnes de données transférées et d’électricité consommée.  
 
-Ces gestes comptent, mais ils masquent souvent une cause amont : trop de données chargées parce que le parcours exige trop d’étapes, un composant omniscient qui refait tout son rendu, une architecture côté client qui pousse le navigateur à faire le travail du serveur.
-
-C’est confortable de corriger à la marge ; c’est plus exigeant de questionner le flux de bout en bout. Or c’est précisément là que se nichent les plus grands gains.
-
-Réduire le nombre d’écrans, rapprocher les calculs de la donnée, supprimer une synchronisation redondante, simplifier une collection trop verbeuse, mettre en place un <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Caching" target="_blank" rel="noreferrer">cache HTTP explicite</a> plutôt que d’empiler des optimisations ponctuelles.
-
-### Le web est vivant, les maquettes sont statiques
-
-Les maquettes rassurent, mais elles figeaient parfois mes décisions. Dans la réalité, les appareils, les réseaux, les comportements ne sont pas uniformes.
-
-Un produit frugal accepte cette variabilité : un layout qui se fluidifie plutôt qu’un assemblage de pixels immuables, des états explicites quand un contenu tarde à venir, un parcours qui fonctionne même sans animation, même sans JavaScript, même sans police exotique.
-
-On ne “lâche” pas la qualité en renonçant à la rigidité : on la déplace vers la robustesse. C’est l’esprit du <a href="https://developer.mozilla.org/fr/docs/Glossary/Progressive_Enhancement" target="_blank" rel="noreferrer">progressive enhancement</a>, du design réellement <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank" rel="noreferrer">responsive</a>, et d’une sémantique HTML solide qui profitent autant à l’accessibilité qu’à la sobriété.
-
-### Mesurer avant d’affiner
-
-On optimise mieux quand on sait ce que l’on cherche à améliorer. Poser des <a href="https://addyosmani.com/blog/performance-budgets/" target="_blank" rel="noreferrer">budgets de performance</a> dès le départ change les conversations.
-
-Un poids de page maximal, un LCP cible, un nombre de requêtes attendu : ces garde-fous évitent les débats de goût et éclairent les arbitrages.
-
-Instrumenter côté client et côté serveur replace la réalité d’usage au centre : un peu de <a href="https://web.dev/vitals-rum/" target="_blank" rel="noreferrer">RUM</a> pour les métriques terrain, <a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank" rel="noreferrer">Lighthouse</a> et <a href="https://www.webpagetest.org/" target="_blank" rel="noreferrer">WebPageTest</a> pour comprendre les goulots, des traces et logs pour relier une lenteur à une route ou une dépendance précise.
-
-On découvre souvent que la moitié des utilisateurs navigue sur des réseaux inégaux, que certaines pages servent dix fois trop de données par confort d’implémentation, et que le “ressenti” diffère fortement des chiffres de laboratoire.
-
-### La frugalité comme contrainte créative
-
-Contrairement à l’idée reçue, la frugalité n’enferme pas : elle cadre et rend plus créatif. Quand un parcours doit tenir dans un budget d’attention et d’octets limité, la navigation respire et les actions deviennent évidentes.
-
-Quand un rendu doit se stabiliser vite, on retire les dépendances inutiles, on évite les comportements superflus, on redonne aux images leur juste taille et on adopte des formats modernes comme <a href="https://web.dev/uses-modern-image-formats/" target="_blank" rel="noreferrer">AVIF ou WebP</a>.
-
-Quand la donnée est coûteuse, on fait émerger les vrais besoins : ce qui doit être vu tout de suite, ce qui peut attendre, ce qui peut être résumé, pré‑calculé, pré‑rendu.
-
-On déplace le calcul dans le temps (hors ligne, au build, en tâche différée) et dans l’espace (plus près du serveur ou du <a href="https://developer.mozilla.org/en-US/docs/Glossary/CDN" target="_blank" rel="noreferrer">CDN</a>), plutôt que de tout imposer au navigateur.
-
-### Réfléchir et déléguer, au‑delà du code
-
-Être développeur, ce n’est pas produire le plus de code possible ; c’est poser le bon problème et décider où se trouve la solution la plus simple. Avoir la tête bien faite, c’est savoir dire non, repousser ce qui n’est pas essentiel et différer ce qui n’est pas prouvé utile, une posture résumée par le principe <a href="https://martinfowler.com/bliki/Yagni.html" target="_blank" rel="noreferrer">YAGNI</a>. C’est aussi arbitrer entre <a href="https://martinfowler.com/articles/BuyVsBuild.html" target="_blank" rel="noreferrer">build vs buy</a>, documenter ses choix avec des <a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions" target="_blank" rel="noreferrer">Architecture Decision Records (ADR)</a>, et assumer des compromis lisibles par l’équipe.
-
-Déléguer, c’est tirer parti des bons niveaux d’abstraction : laisser le navigateur faire ce qu’il sait faire (mise en page avec <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_grid_layout" target="_blank" rel="noreferrer">CSS Grid</a>/<a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_flexible_box_layout" target="_blank" rel="noreferrer">Flexbox</a>, <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/form" target="_blank" rel="noreferrer">formulaires HTML</a>, <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Attributes/required" target="_blank" rel="noreferrer">validations natives</a>), confier l’état durable et le calcul lourd au serveur, externaliser la diffusion au <a href="https://developer.mozilla.org/en-US/docs/Glossary/CDN" target="_blank" rel="noreferrer">CDN</a>, et déplacer le travail différable vers des services annexes (<a href="https://12factor.net/backing-services" target="_blank" rel="noreferrer">backing services</a>, files, tâches planifiées). C’est moins “héroïque” que tout réécrire, mais bien plus durable et plus sobre.
-
-Ce positionnement élargit le rôle du dev : moins d’implémentation réflexe, plus de cadrage, de communication et de responsabilité produit. On gagne en maintenabilité, en partage de connaissance et en coût de possession, et presque toujours en performance perçue.
-
-### Pratiques sobres et durables
-
-Au quotidien, cela se traduit par des choix sobres mais durables. Préférer le <a href="https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic-rendering" target="_blank" rel="noreferrer">pré‑rendu quand c’est possible</a> et garder le JavaScript critique au minimum.
-
-Pratiquer le <a href="https://webpack.js.org/guides/code-splitting/" target="_blank" rel="noreferrer">code‑splitting</a> à la route, servir des images adaptées (dimensions justes, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank" rel="noreferrer">art direction</a> si nécessaire) et activer un cache clair côté client et serveur avec des en‑têtes comme <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag" target="_blank" rel="noreferrer">ETag</a>.
-
-Côté données, résister à la tentation des réponses “complètes” : privilégier le juste‑à‑temps, avec pagination, filtrage pertinent et compression. Côté UI, rendre visibles les temps d’attente, expliciter les erreurs, prévoir des parcours de secours quand certaines capacités manquent.
-
-Côté build, surveiller le poids réel des bundles avec <a href="https://github.com/webpack-contrib/webpack-bundle-analyzer" target="_blank" rel="noreferrer">webpack‑bundle‑analyzer</a> et retirer régulièrement ce qui n’apporte plus de valeur.
-
-### Accessibilité, longévité, efficacité
-
-Il m’a fallu du temps pour relier accessibilité et sobriété. Une interface accessible réduit les contorsions cognitives et techniques : structure claire, ordre de lecture cohérent, contrastes suffisants, focus visibles, erreurs compréhensibles.
-
-Elle demande moins d’allers‑retours réseau, s’appuie davantage sur le HTML sémantique et évite la surenchère d’effets. Autrement dit, elle supprime du calcul et des octets.
-
-Les <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noreferrer">WCAG</a> servent de boussole pour cadrer ces exigences et les relier à des cas d’usage réels.
-
-### Rendre la sobriété explicite dans l’équipe
-
-La sobriété technique tient mieux quand elle est explicite. Des budgets affichés dans la documentation, des critères d’acceptation qui parlent de temps de rendu et de poids d’actifs, une “définition de fait” qui inclut la suppression de ce qui est devenu inutile.
-
-Un tableau de bord partagé avec des métriques terrain, une alerte quand le bundle franchit un seuil, une revue régulière des dépendances permettent d’assumer les compromis et de les rendre réversibles.
-
-### En pratique, comment je m’y prends
-
-Je pars d’un scénario utilisateur précis et je le “coûte” comme on coûte une feature : taille attendue des réponses, nombre d’écrans, temps de rendu acceptable sur un appareil moyen.
-
-J’implémente la version la plus petite qui tient la promesse et je mesure avec des outils simples : <a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank" rel="noreferrer">Lighthouse</a> pour une première lecture, <a href="https://www.webpagetest.org/" target="_blank" rel="noreferrer">WebPageTest</a> pour la variabilité, un peu de <a href="https://web.dev/vitals-rum/" target="_blank" rel="noreferrer">RUM</a> pour capter le réel.
-
-Quand un écart apparaît, j’interroge d’abord le périmètre fonctionnel : est‑ce que tout ce qui est servi est nécessaire ici et maintenant ? Puis la donnée : peut‑on envoyer moins, plus compressé, plus ciblé, mieux mis en cache ?
-
-Puis le rendu : le serveur peut‑il préparer davantage, le <a href="https://react.dev/reference/rsc" target="_blank" rel="noreferrer">rendu côté serveur</a> ou le <a href="https://react.dev/reference/react/Suspense" target="_blank" rel="noreferrer">streaming/Suspense</a> aident‑ils ? Enfin l’interface : l’attente est‑elle mieux assumée, un état de chargement soulage‑t‑il la perception, un texte plus clair évite‑t‑il un détour ?
-
-Ce cycle se répète et m’aide à ne pas confondre sophistication et valeur.
+Optimiser une image ou réduire une dépendance peut sembler symbolique, mais c’est un signal fort : celui qu’on accepte d’intégrer la sobriété comme un critère de qualité. Et ce signal, répété, finit par changer les normes du métier.  
 
 ---
 
-Au fond, “<em>du carbone au code</em>” n’est pas un slogan, c’est un rappel : nos choix quotidiens (où l’on calcule, ce que l’on envoie, quand on l’envoie, ce que l’on affiche) ont un effet direct. On peut l’ignorer ou on peut le travailler, en alignant le confort d’usage et l’économie de moyens.
+*Dans un projet tourné vers l’écologie, cette attention au détail prend une dimension particulière. On ne peut pas se contenter d’un discours vert si l’expérience elle-même ne suit pas.*  
 
-Ce n’est pas plus de travail, c’est un autre ordre des priorités : commencer par la valeur, rendre le coût visible, et n’ajouter que ce qui se justifie. Le résultat est souvent plus rapide, plus robuste et, presque par accident, plus sobre.
+---
 
-Pour creuser, des ressources utiles : <a href="https://sustainablewebdesign.org/" target="_blank" rel="noreferrer">Sustainable Web Design</a> pour les repères, <a href="https://www.thegreenwebfoundation.org/" target="_blank" rel="noreferrer">The Green Web Foundation</a> pour l’écosystème, et les outils <a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank" rel="noreferrer">Lighthouse</a> et <a href="https://www.webpagetest.org/" target="_blank" rel="noreferrer">WebPageTest</a> pour éclairer les angles morts. Si quelque chose mérite d’être nuancé, corrigé ou enrichi, je suis preneur ; les propositions sont bienvenues via Pull Request : <a href="https://github.com/raphaelchpprt/raphaelch.me/pulls" target="_blank" rel="noreferrer">github.com/raphaelchpprt/raphaelch.me/pulls</a>.
+## Développer, c’est arbitrer  
+
+Le métier ne se résume pas à traduire des maquettes en code. Il implique de poser des limites, de simplifier, parfois de dire “non”. Accepter de ne pas construire, c’est déjà améliorer le produit.  
+
+Cela veut aussi dire partager la responsabilité : au serveur ce qui doit être robuste, au navigateur ce qui peut être calculé à la volée, aux processus métiers ce qui relève de la décision. Et surtout, documenter ces choix pour que l’équipe garde la cohérence collective.  
+
+---
+
+## L’impact, caché derrière l’écran  
+
+Parce que tout se passe dans le “cloud”, on oublie que le numérique repose sur une infrastructure bien physique : data centers, câbles sous-marins, batteries qui chauffent. Le numérique pèse environ 4 % des émissions de CO₂ dans le monde, et sa part continue d’augmenter.  
+
+À cette échelle, l’efficacité n’est pas un luxe. C’est un levier. Un site qui se charge plus vite sur un vieux téléphone, c’est à la fois une meilleure expérience utilisateur et une économie d’énergie.  
+
+---
+
+## Dépasser le “tout code”  
+
+Un bon développeur ne se définit pas uniquement par la quantité de lignes produites. Sa valeur se joue aussi dans sa capacité à mettre des garde-fous : budgets de performance, états explicites, suppression du superflu.  
+
+Ces choix paraissent minimes pris isolément. Mais ensemble, ils dessinent une autre façon de construire : plus sobre, plus robuste, plus respectueuse. Et dans un environnement greentech, cette cohérence est indispensable pour être crédible.  
+
+---
+
+## En guise de conclusion  
+
+Le développement n’est pas une activité neutre. Coder, c’est orienter, choisir, assumer. C’est décider du monde numérique qu’on met en circulation.  
+
+La sobriété ne limite pas la créativité : elle sert de cap. Elle rend les produits plus accessibles, plus rapides, plus durables. Et au passage, elle redonne du sens au métier de développeur.  
