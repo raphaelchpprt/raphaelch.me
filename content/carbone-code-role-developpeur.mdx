@@ -11,54 +11,64 @@ export const metadata = {
 
 ---
 
-Quand j’ai commencé à travailler dans la greentech, je voyais encore le code comme une matière “technique”, presque abstraite. Rapidement, j’ai compris qu’il n’était jamais neutre. Chaque choix a une incidence : sur l’énergie consommée, sur le matériel sollicité, sur l’attention demandée aux utilisateurs.  
+Quand j’ai commencé à travailler dans la greentech, je voyais encore le code comme une matière “technique”, presque abstraite, sans ancrage avec le réel. Avec le temps, j’ai compris qu'en plus d'être un puissant moyen d'expression et d'action, il n’était jamais neutre.
 
-Cette idée m’a conduit à envisager le développement autrement : non plus comme un simple exercice de construction de fonctionnalités, mais comme une suite de décisions qui façonnent à la fois le produit et son empreinte.  
+Chaque choix a une incidence : sur l’énergie consommée jusqu'à l’attention demandée aux utilisateurs. Cette idée m’a conduit à envisager le développement autrement : non plus comme un simple exercice de construction de fonctionnalités, mais plutôt comme une suite de décisions interdépendantes qui façonnent à la fois le produit et son empreinte.  
 
 ---
 
-*Et au-delà de la diversité des appareils, il y a aussi celle des capacités humaines et des situations de vie. L’accessibilité, les contraintes réseau ou cognitives mériteraient à elles seules un autre billet.*  
+*Réduire les micro-coûts et les frictions rend bien souvent le produit plus rapide, plus lisible et moins énergivore.*  
 
 ---
 
 ## Le code laisse une trace  
 
-Un bouton “en plus”, un script chargé par défaut, une animation mal optimisée : autant de petits choix qui alourdissent l’ensemble. Rien de dramatique à l’échelle d’un prototype. Mais quand un service prend de l’ampleur, ces détails deviennent des tonnes de données transférées et d’électricité consommée.  
+Un bouton “en plus”, un script chargé par défaut, une animation mal optimisée : autant de choix mineurs qui finissent par alourdir l’ensemble. Rien de dramatique à l’échelle d’un prototype. Mais quand un service prend de l’ampleur, ces détails deviennent des quantités de données transférées et d’électricité consommée.  
 
-Optimiser une image ou réduire une dépendance peut sembler symbolique, mais c’est un signal fort : celui qu’on accepte d’intégrer la sobriété comme un critère de qualité. Et ce signal, répété, finit par changer les normes du métier.  
+Optimiser une image ou réduire une dépendance peut sembler symbolique voire anecdotique au regard de l'ampleur des changements nécessaires. En réalité, c’est un signal fort : celui que l'on accepte d’intégrer la sobriété comme un critère de qualité. Ce signal, répété et prôné, finit par changer les normes du métier.  
 
----
-
-*Dans un projet tourné vers l’écologie, cette attention au détail prend une dimension particulière. On ne peut pas se contenter d’un discours vert si l’expérience elle-même ne suit pas.*  
+Dans un projet poursuivant un intérêt écologique, cette rigueur certes micro est un gage de crédibilité : appliquer le principe <a href="https://martinfowler.com/bliki/Yagni.html" target="_blank" rel="noreferrer">YAGNI</a>, préférer le <a href="https://developer.mozilla.org/fr/docs/Glossary/Progressive_Enhancement" target="_blank" rel="noreferrer">progressive enhancement</a> et éviter le <a href="https://medium.com/just-tech-it-now/les-sympt%C3%B4mes-de-lover-engineering-78ebd963a81" target="_blank" rel="noreferrer">sur-dev</a> comptent autant que le discours.
 
 ---
 
-## Développer, c’est arbitrer  
-
-Le métier ne se résume pas à traduire des maquettes en code. Il implique de poser des limites, de simplifier, parfois de dire “non”. Accepter de ne pas construire, c’est déjà améliorer le produit.  
-
-Cela veut aussi dire partager la responsabilité : au serveur ce qui doit être robuste, au navigateur ce qui peut être calculé à la volée, aux processus métiers ce qui relève de la décision. Et surtout, documenter ces choix pour que l’équipe garde la cohérence collective.  
+*Ces approches peuvent apparaître aux yeux des plus technophiles comme des renoncements à l'innovation. Mais pourquoi ne pas les voir comme des opportunités d'inventer un rapport plus sain au numérique, un ensemble de remparts à ses dérives et contre la « <a href="https://www.lemonde.fr/idees/article/2025/04/23/la-merdification-ce-processus-inexorable-de-degradation-de-la-qualite-des-services-sur-les-plateformes-numeriques_6599211_3232.html" target="_blank" rel="noreferrer">merdification</a> » de certains grands produits.*  
 
 ---
 
 ## L’impact, caché derrière l’écran  
 
-Parce que tout se passe dans le “cloud”, on oublie que le numérique repose sur une infrastructure bien physique : data centers, câbles sous-marins, batteries qui chauffent. Le numérique pèse environ 4 % des émissions de CO₂ dans le monde, et sa part continue d’augmenter.  
+Parce que tout se passe dans le cloud sous les radars, on oublie que le numérique repose sur une infrastructure physique lourde : data centers, câbles sous-marins, production et consommation de batteries. Le numérique pèse environ 4 % des émissions de CO₂ dans le monde selon <a href="https://theshiftproject.org/publications/mondes-virtuels-reseaux-double-contrainte-carbone/" target="_blank" rel="noreferrer">The Shift Project</a>, et sa part ne cesse d’augmenter.  
 
-À cette échelle, l’efficacité n’est pas un luxe. C’est un levier. Un site qui se charge plus vite sur un vieux téléphone, c’est à la fois une meilleure expérience utilisateur et une économie d’énergie.  
+À cette échelle, l'efficience n’est pas un luxe mais un repère cardinal. C’est aussi un levier. Un site qui se charge plus vite sur un vieux téléphone, c’est à la fois une meilleure expérience utilisateur et une économie d’énergie non négligeable (requêtes).  
+
+## Sobriété énergétique et UX, une relation symbiotique
+
+Alléger, ce n’est pas retirer de la valeur, c’est enlever ce qui ralentit ou distrait. Moins de données envoyées, moins d’écrans inutiles, des images à la bonne taille, des textes qui vont droit au but : la page arrive plus vite, l’utilisateur comprend plus tôt, l’appareil travaille moins.
+
+La contrainte (faire simple, léger, clair) devient un moteur de créativité : on combine, on simplifie, on vulgarise, on reformule et l’interface respire. C’est précisément l’esprit du <a href="https://www.sustainablewebmanifesto.com/" target="_blank" rel="noreferrer">Sustainable Web Manifesto</a> : utile, efficient, résilient plutôt que lourd, décoratif et marketing.
+
+---
+
+*L’efficience, c'est ça : obtenir l’effet utile pour le minimum d’énergie et d’attention dépensées. Dire non tôt (principe <a href="https://fr.wikipedia.org/wiki/YAGNI" target="_blank" rel="noreferrer">YAGNI</a>) libère du temps pour soigner ce qui reste. On retire avant d’ajouter, on clarifie avant d’optimiser. Cela rend le produit plus fluide, plus accessible et plus crédible.*
 
 ---
 
-## Dépasser le “code-focused”  
+D'autant plus sur un SaaS de bilan carbone où l'utilisateur n'est pas nécessairement un expert technique. Il a besoin d'un produit qui communique clairement et rende intelligible une forte volumétrie de données à caractère scientifique, pour en tirer les meilleurs insights et ainsi, atteindre en pratique ses objectifs de réduction. 
 
-Un bon développeur ne se définit pas uniquement par la quantité de lignes produites. Sa valeur se joue aussi dans sa capacité à mettre des garde-fous : budgets de performance, états explicites, suppression du superflu.  
+## Développer, c’est arbitrer  
 
-Ces choix paraissent minimes pris isolément. Mais ensemble, ils dessinent une autre façon de construire : plus sobre, plus robuste, plus respectueuse. Et dans un environnement greentech, cette cohérence est indispensable pour être crédible.  
+Le métier de développeur ne se résume pas à traduire des maquettes en code, a fortiori à l'heure de l'intelligence artificielle : il impose de poser des limites sur le plan technique (<a href="https://addyosmani.com/blog/performance-budgets/" target="_blank" rel="noreferrer">budgets de performance</a>), de simplifier sur le plan du design (principe <a href="https://en.wikipedia.org/wiki/KISS_principle" target="_blank" rel="noreferrer">KISS</a>), et parfois de dire “non”. Accepter de ne pas construire ou d'envisager des alternatives, c’est déjà améliorer le produit.
 
----
+Cela veut aussi dire partager la responsabilité : au serveur ce qui doit être robuste, au navigateur ce qui peut être calculé à la volée, aux processus métiers ce qui relève de la décision, et documenter ces choix (ex. <a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions" target="_blank" rel="noreferrer">ADR</a>) pour que l’équipe garde la cohérence collective.  
+
+## Dépasser le “code-focused”
+
+Un bon développeur ne se définit pas uniquement par la quantité de lignes produites. Sa valeur se joue aussi dans sa capacité à réfléchir en amont, à savoir déléguer, et à implémenter des garde-fous qui garantiront à la fois la pérennité du produit et celle du monde dans lequel il évolue.
+
+Ces choix paraissent minimes pris isolément. Mais ensemble, ils dessinent une autre façon de construire : plus sobre, plus robuste, plus limpide, plus respectueuse. Et dans un environnement greentech, cette cohérence est indispensable pour être crédible.  
 
 ## En guise de conclusion  
 
-Le développement n’est pas une activité neutre. Coder, c’est orienter, choisir, assumer. C’est décider du monde numérique qu’on met en circulation.  
+Le développement n’est pas une activité neutre. Coder, c’est orienter, choisir, faire preuve de responsabilités. C’est décider du monde numérique qu’on met en circulation.  
 
-La sobriété ne limite pas la créativité : elle sert de cap. Elle rend les produits plus accessibles, plus rapides, plus durables. Et au passage, elle redonne du sens au métier de développeur.  
+La sobriété ne limite pas la créativité : elle fixe un cap et pose un cadre. Elle rend les produits plus accessibles, plus rapides, plus durables. Et au passage, elle redonne du sens au métier de développeur.
