@@ -27,7 +27,6 @@ export default async function Page({
 
 export function generateStaticParams() {
   return [
-    { slug: "experience-utilisateur-politique" },
     { slug: "carbone-code-role-developpeur" },
     { slug: "futur-front-end-interfaces-humaines-ia" },
   ];
