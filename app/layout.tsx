@@ -25,7 +25,7 @@ const serif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "raphaelch.me",
   description:
-    "Concepteur d’expériences digitales alliant design, ergonomie et accessibilité, j’accompagne les projets à impact positif dans la tech, la RSE et la transition énergétique.",
+    "Développeur full-stack avec un goût marqué pour le design et les produits centrés utilisateur, orientés RSE, transition énergétique, greentech, économie sociale et solidaire. Basé à Biarritz, France.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
