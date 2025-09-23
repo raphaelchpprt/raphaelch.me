@@ -70,21 +70,24 @@ export default async function Home() {
         <h3 className="text-accent mb-4 font-sans font-semibold">notes</h3>
 
         <ul className="flex flex-col gap-6">
-          {posts.map((post) => (
-            <li key={post.slug}>
-              <Link
-                href={paths.notes(post.slug)}
-                className="group flex flex-col items-start gap-0"
-              >
-                <span className="group-hover:text-foreground text-accent font-semibold transition-colors duration-150">
-                  {post.title}
-                </span>
-                <span className="text-muted-foreground">
-                  {post.description.replace(/\.$/, "")}
-                </span>
-              </Link>
-            </li>
-          ))}
+          {posts.map(
+            (post) =>
+              post.publish && (
+                <li key={post.slug}>
+                  <Link
+                    href={paths.notes(post.slug)}
+                    className="group flex flex-col items-start gap-0"
+                  >
+                    <span className="group-hover:text-foreground text-accent font-semibold transition-colors duration-150">
+                      {post.title}
+                    </span>
+                    <span className="text-muted-foreground">
+                      {post.description.replace(/\.$/, "")}
+                    </span>
+                  </Link>
+                </li>
+              ),
+          )}
         </ul>
       </div>
       <div>
