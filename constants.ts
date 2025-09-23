@@ -8,5 +8,5 @@ export const paths = {
   linkedin: "https://www.linkedin.com/in/raphaelchappert",
   malt: "https://www.malt.fr/profile/raphaelchappert",
   email: "mailto:hi@raphaelch.me",
-  cv: "/cv-raphael-chappert-software-developer.pdf",
+  cv: "/cv-Raphael-CHAPPERT_fullstack-developer_website.pdf",
 };
