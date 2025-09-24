@@ -99,9 +99,9 @@ export default async function Home() {
             carbone
           </p>
           <p className="max-w-prose text-pretty">
-            aujourd&apos;hui, je continue à développer des produits tech pensés
-            aussi bien pour l&apos;utilisateur que pour répondre aux défis
-            sociaux, écologiques et numériques
+            aujourd&apos;hui, je m&apos;attache à développer des produits tech
+            pensés aussi bien pour l&apos;utilisateur que pour répondre aux
+            défis sociaux, écologiques et numériques
           </p>
         </div>
       </div>
