@@ -53,14 +53,12 @@ export default async function Home() {
             goût marqué pour le design et les{" "}
             <strong>produits centrés utilisateur</strong>
           </h2>
-
           <p className="text-balance">
             désireux de mettre la technologie, la créativité, l&apos;ergonomie
             et l&rsquo;innovation{" "}
             <strong>au service de l&rsquo;intérêt collectif</strong> et de la
             société
           </p>
-
           <p>
             toujours partant pour discuter de design, de SIG, de green &
             low-tech, de développement produit utile à tous et pensé pour chacun
