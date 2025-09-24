@@ -13,14 +13,14 @@ export const experiences: {
     company: "impacti",
     dateRange: "novembre 2021 - mai 2025 (3 ans et 6 mois)",
     companyDescription:
-      "impacti est une start-up qui développe le saas carbon, plateforme qui permet aux institutions, ong et entreprises de suivre l’évolution de leurs données d’émissions, de se fixer des objectifs de réduction et de les atteindre grâce à l’accompagnement d’une équipe interne d’experts",
+      'impacti est une start-up qui développe le saas "carbon", plateforme qui permet aux institutions, ong et entreprises de suivre l’évolution de leurs données d’émissions, de se fixer des objectifs de réduction et de les atteindre grâce à l’accompagnement d’une équipe interne d’experts',
     missionDescription:
       "mes missions étaient de contribuer au développement de l’interface saas de carbon et d’améliorer l’expérience utilisateur, tout en garantissant la fiabilité et l'identité de l’outil :",
     achievements: [
       React.createElement(
         React.Fragment,
         null,
-        "développer et optimiser l’interface de gestion applicative de données carbones complexes à forte volumétrie, en utilisant ",
+        "développer et optimiser l’interface de gestion applicative de données carbones complexes à caractère scientifique et à forte volumétrie, en utilisant ",
         React.createElement(
           "span",
           { className: "text-accent" },
@@ -36,7 +36,7 @@ export const experiences: {
           { className: "text-accent" },
           "du backend au frontend",
         ),
-        ", comme un centre de notifications, un système de gestion des rôles et permissions, et des tableaux de bord interactifs pour la visualisation des données",
+        ", comme un centre de notifications, un système de gestion des rôles et permissions, et des tableaux de bord dynamiques pour la visualisation des données",
       ),
       React.createElement(
         React.Fragment,
