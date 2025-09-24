@@ -1,13 +1,15 @@
 import React, { ReactNode } from "react";
 
-export const experiences: {
+export type Experience = {
   jobTitle: string;
   company: string;
   dateRange: string;
   companyDescription: string;
   missionDescription: string;
   achievements: ReactNode[];
-}[] = [
+};
+
+export const experiences: Experience[] = [
   {
     jobTitle: "développeur saas fullstack/frontend",
     company: "impacti",

@@ -2,6 +2,7 @@ import { ElementType } from "react";
 import { InlineLink } from "@/components/link";
 import { SpinningText } from "@/components/spinning-text";
 import { Hero } from "@/components/hero";
+import { ExperienceItem } from "@/components/experience-item";
 import {
   ReactIcon,
   NextIcon,
@@ -106,24 +107,11 @@ export default async function Home() {
       </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">expérience</h3>
-        {experiences.map((exp) => (
-          <div key={exp.company} className="flex flex-col gap-6">
-            {/* Le reste du code .map() ne change pas */}
-            <p className="max-w-prose text-pretty">
-              <span className="text-accent font-semibold">{exp.jobTitle}</span>{" "}
-              @{exp.company}
-              <br />
-              <span className="text-muted-foreground">{exp.dateRange}</span>
-            </p>
-            <p className="max-w-prose text-pretty">{exp.companyDescription}</p>
-            <p className="max-w-prose text-pretty">{exp.missionDescription}</p>
-            <ul className="flex list-inside list-disc flex-col gap-4 text-pretty">
-              {exp.achievements.map((achievement, index) => (
-                <li key={index}>{achievement}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="flex flex-col">
+          {experiences.map((exp) => (
+            <ExperienceItem key={exp.company} experience={exp} />
+          ))}
+        </div>
       </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">parcours</h3>
