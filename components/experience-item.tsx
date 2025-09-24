@@ -50,7 +50,7 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
 
       <button
         onClick={toggleExpansion}
-        className="text-foreground -mt-2 self-start underline transition-colors hover:cursor-pointer hover:no-underline"
+        className={`${isExpanded ? "text-muted-foreground" : "text-foreground"} -mt-2 self-start underline transition-colors hover:cursor-pointer hover:no-underline`}
       >
         {isExpanded ? "voir moins" : "voir plus"}
       </button>
