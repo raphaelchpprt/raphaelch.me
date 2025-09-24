@@ -44,7 +44,7 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
         </div>
 
         {!isExpanded && (
-          <div className="from-background absolute bottom-0 h-30 w-full bg-gradient-to-t to-transparent" />
+          <div className="from-background absolute bottom-0 h-18 w-full bg-gradient-to-t to-transparent" />
         )}
       </div>
 
