@@ -26,7 +26,7 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
       <div
         className={cn(
           "relative overflow-hidden transition-all duration-500 ease-in-out",
-          isExpanded ? "max-h-[1000px]" : "max-h-24",
+          isExpanded ? "max-h-[1500px]" : "max-h-24",
         )}
       >
         <div className="flex flex-col gap-6">
