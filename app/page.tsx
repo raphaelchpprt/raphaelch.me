@@ -89,8 +89,8 @@ export default async function Home() {
         <div className="flex flex-col gap-6">
           <p className="max-w-prose text-pretty">
             après un master en relations internationales, j&apos;ai travaillé
-            plusieurs années au sein d&apos;organisations (onu, ong) en tant que
-            chargé de communication web et digitale
+            plusieurs années au sein d&apos;organisations (nations unies, ong)
+            en tant que chargé de communication web et digitale
           </p>
           <p className="max-w-prose text-pretty">
             je me suis ensuite orienté vers le développement web avec un
