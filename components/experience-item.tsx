@@ -16,7 +16,7 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
   };
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4">
       <p className="max-w-prose text-pretty">
         <span className="text-accent font-semibold">{experience.jobTitle}</span>{" "}
         @{experience.company}
@@ -38,19 +38,19 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
           </p>
           <ul className="flex list-inside list-disc flex-col gap-4 text-pretty">
             {experience.achievements.map((achievement, index) => (
-              <li key={index}>{achievement}</li>
+              <li key={`${achievement}-${index}`}>{achievement}</li>
             ))}
           </ul>
         </div>
 
         {!isExpanded && (
-          <div className="from-background absolute bottom-0 h-26 w-full bg-gradient-to-t to-transparent" />
+          <div className="from-background absolute bottom-0 h-30 w-full bg-gradient-to-t to-transparent" />
         )}
       </div>
 
       <button
         onClick={toggleExpansion}
-        className="text-accent hover:text-foreground -mt-4 self-start underline transition-colors hover:cursor-pointer hover:no-underline"
+        className="text-accent hover:text-foreground -mt-2 self-start underline transition-colors hover:cursor-pointer hover:no-underline"
       >
         {isExpanded ? "voir moins" : "voir plus"}
       </button>

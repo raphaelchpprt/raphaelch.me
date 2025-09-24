@@ -105,11 +105,9 @@ export default async function Home() {
       </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">expérience</h3>
-        <div className="flex flex-col">
-          {experiences.map((exp) => (
-            <ExperienceItem key={exp.company} experience={exp} />
-          ))}
-        </div>
+        {experiences.map((exp, index) => (
+          <ExperienceItem key={`${exp.company}-${index}`} experience={exp} />
+        ))}
       </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">parcours</h3>
