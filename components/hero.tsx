@@ -20,7 +20,7 @@ export const Hero: FC = () => {
         }}
       >
         salut, <br />
-        moi c&apos;est raphaël
+        c&apos;est raphaël
       </motion.h1>
 
       <motion.span
