@@ -15,6 +15,7 @@ import {
 } from "@/components/icons";
 import { paths } from "@/constants";
 import { getBlogPosts } from "@/lib/blog";
+import { experiences } from "@/lib/xp-data";
 import Link from "next/link";
 
 const stacks: { label: string; icon: ElementType }[] = [
@@ -102,6 +103,82 @@ export default async function Home() {
             ))}
           </p>
         </div>
+      </div>
+      <div>
+        <h3 className="text-accent mb-4 font-sans font-semibold">expérience</h3>
+        {experiences.map((exp) => (
+          <div key={exp.company} className="flex flex-col gap-6">
+            {/* Le reste du code .map() ne change pas */}
+            <p className="max-w-prose text-pretty">
+              <span className="text-accent font-semibold">{exp.jobTitle}</span>{" "}
+              @{exp.company}
+              <br />
+              <span className="text-muted-foreground">{exp.dateRange}</span>
+            </p>
+            <p className="max-w-prose text-pretty">{exp.companyDescription}</p>
+            <p className="max-w-prose text-pretty">{exp.missionDescription}</p>
+            <ul className="flex list-inside list-disc flex-col gap-4 text-pretty">
+              {exp.achievements.map((achievement, index) => (
+                <li key={index}>{achievement}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        {/* <div className="flex flex-col gap-6">
+          <p className="max-w-prose text-pretty">
+            <span className="text-accent font-semibold">
+              développeur SaaS fullstack/frontend
+            </span>{" "}
+            @impacti
+            <br />
+            <span className="text-muted-foreground">
+              novembre 2021 - mai 2025 (3 ans et 6 mois)
+            </span>
+          </p>
+
+          <p className="max-w-prose text-pretty">
+            Impacti est une start-up qui développe le SaaS Carbon, plateforme
+            qui permet aux institutions, ONG et entreprises de suivre
+            l’évolution de leurs données d’émissions, de se fixer des objectifs
+            de réduction et de les atteindre grâce à l’accompagnement d’une
+            équipe interne d’experts.
+          </p>
+          <p className="max-w-prose text-pretty">
+            Ma mission était de contribuer au développement de l’interface SaaS
+            de Carbon et d’améliorer l’expérience utilisateur, tout en
+            garantissant la fiabilité et la modernité de l’outil.
+          </p>
+          <ul className="flex list-inside list-disc flex-col gap-4 text-pretty">
+            <li>
+              J’ai pu développer et optimiser l’interface SaaS de gestion
+              applicative de données carbones complexes à forte volumétrie, en
+              utilisant{" "}
+              <span className="text-accent">
+                React, Node, Redux et MaterialUI
+              </span>
+              .
+            </li>
+            <li>
+              J’ai pu construire des fonctionnalités{" "}
+              <span className="text-accent">du backend au frontend</span>, comme
+              un centre de notifications, un système de gestion des rôles et
+              permissions, et des tableaux de bord interactifs pour la
+              visualisation des données.
+            </li>
+            <li>
+              J’ai fait le lien entre l’équipe produit et une agence de design
+              Ux pour mener la refonte de l’interface et du parcours
+              utilisateur, afin de rendre le produit plus accessible et agréable
+              à utiliser.
+            </li>
+            <li>
+              J’ai participé à la maintenance et à l’évolution de la plateforme
+              grâce à un environnement technique basé sur Node, MongoDB, Docker,
+              avec une gestion de projet selon les principes de la méthode Agile
+              SCRUM via Jira et Bitbucket.
+            </li>
+          </ul>
+        </div> */}
       </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">parcours</h3>
