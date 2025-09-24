@@ -65,31 +65,6 @@ export default async function Home() {
           </p>
         </div>
       </div>
-
-      <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">notes</h3>
-
-        <ul className="flex flex-col gap-6">
-          {posts.map(
-            (post) =>
-              post.publish && (
-                <li key={post.slug}>
-                  <Link
-                    href={paths.notes(post.slug)}
-                    className="group flex flex-col items-start gap-0"
-                  >
-                    <span className="group-hover:text-foreground text-accent font-semibold transition-colors duration-150">
-                      {post.title}
-                    </span>
-                    <span className="text-muted-foreground">
-                      {post.description.replace(/\.$/, "")}
-                    </span>
-                  </Link>
-                </li>
-              ),
-          )}
-        </ul>
-      </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">stacks</h3>
         <div className="flex flex-col gap-6">
@@ -118,7 +93,7 @@ export default async function Home() {
             chargé de communication web et digitale
           </p>
           <p className="max-w-prose text-pretty">
-            je me suis ensuite réorienté vers le développement web avec un
+            je me suis ensuite orienté vers le développement web avec un
             bootcamp et j&apos;ai rejoint une startup greentech où j&apos;ai
             contribué pendant 4 ans à la conception d&apos;un saas de bilan
             carbone
@@ -129,6 +104,29 @@ export default async function Home() {
             sociaux, écologiques et numériques
           </p>
         </div>
+      </div>
+      <div>
+        <h3 className="text-accent mb-4 font-sans font-semibold">notes</h3>
+        <ul className="flex flex-col gap-6">
+          {posts.map(
+            (post) =>
+              post.publish && (
+                <li key={post.slug}>
+                  <Link
+                    href={paths.notes(post.slug)}
+                    className="group flex flex-col items-start gap-0"
+                  >
+                    <span className="group-hover:text-foreground text-accent font-semibold transition-colors duration-150">
+                      {post.title}
+                    </span>
+                    <span className="text-muted-foreground">
+                      {post.description.replace(/\.$/, "")}
+                    </span>
+                  </Link>
+                </li>
+              ),
+          )}
+        </ul>
       </div>
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">plus</h3>
