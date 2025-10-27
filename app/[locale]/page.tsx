@@ -49,16 +49,36 @@ export default async function Home({
   return (
     <div className="mx-auto flex max-w-screen-md flex-col gap-12 px-6 pt-24 font-mono">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-4">
-        <div className="group -mt-8 flex flex-col sm:flex-row items-end sm:items-center justify-between sm:justify-end gap-8 sm:gap-32">
+               {/* Mobile : spinning text à gauche du Hero */}
+        <div className="sm:hidden -mt-8 -ml-6 flex items-center justify-between">
+          <div className="-ml-18">
+            <SpinningText
+              className="font-mono text-sm uppercase"
+              radius={5.5}
+              duration={15}
+              alwaysVisible={true}
+            >
+              {dict.home.spinningText}
+            </SpinningText>
+          </div>
+
+          <div className="flex flex-col items-end gap-2">
+            <LanguageSwitcher />
+            <Hero greeting={dict.hero.greeting} name={dict.hero.name} />
+          </div>
+        </div>
+
+        {/* Desktop : layout original avec hover */}
+        <div className="hidden sm:flex group -mt-8 items-center justify-end gap-32">
           <SpinningText
-            className="-mt-4 font-mono text-sm uppercase opacity-0 transition-opacity duration-750 group-hover:opacity-100 hidden sm:block"
+            className="-mt-2 font-mono text-sm uppercase opacity-0 transition-opacity duration-750 group-hover:opacity-100"
             radius={5.5}
             duration={15}
           >
             {dict.home.spinningText}
           </SpinningText>
 
-          <div className="flex flex-col items-end gap-2 w-full sm:w-auto">
+          <div className="flex flex-col items-end gap-2">
             <LanguageSwitcher />
             <Hero greeting={dict.hero.greeting} name={dict.hero.name} />
           </div>

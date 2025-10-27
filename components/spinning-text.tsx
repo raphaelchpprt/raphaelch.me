@@ -9,6 +9,7 @@ type SpinningTextProps = {
   className?: string;
   radius?: number;
   duration?: number;
+  alwaysVisible?: boolean; 
 };
 
 export function SpinningText({
@@ -16,6 +17,7 @@ export function SpinningText({
   className,
   radius = 5,
   duration = 10,
+  alwaysVisible = false,
 }: SpinningTextProps) {
   const letters = children.split("");
   const totalLetters = letters.length;
@@ -23,7 +25,10 @@ export function SpinningText({
   return (
     <div className="group relative flex h-32 w-32 items-center justify-center">
       <div
-        className="absolute opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-70"
+        className={cn(
+          "absolute blur-md transition-opacity duration-300",
+          alwaysVisible ? "opacity-70" : "opacity-0 group-hover:opacity-70"
+        )}
         style={{
           width: "200px",
           height: "200px",
@@ -57,12 +62,15 @@ export function SpinningText({
             transparent 100px
           )`,
           left: "calc(50% + 80px)",
-          top: "calc(50% - 16px)",
+          top: alwaysVisible ? "calc(50% - 0px)" : "calc(50% - 8px)",
           transform: "translate(-50%, -50%)",
         }}
       />
       <div
-        className="absolute opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className={cn(
+          "absolute transition-opacity duration-300",
+          alwaysVisible ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+        )}
         style={{
           width: "110px",
           height: "110px",
@@ -74,7 +82,7 @@ export function SpinningText({
           position: "absolute",
           transformStyle: "preserve-3d",
           left: "calc(50% + 80px)",
-          top: "calc(50% - 16px)",
+          top: alwaysVisible ? "calc(50% - 0px)" : "calc(50% - 8px)",
           transform: "translate(-50%, -50%)",
         }}
       />
