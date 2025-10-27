@@ -3,7 +3,6 @@ import { Golos_Text, JetBrains_Mono, DM_Serif_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "@/components/footer";
 import "../globals.css";
-import { LanguageSwitcher } from "@/components/language-switcher";
 
 const sans = Golos_Text({
   subsets: ["latin"],
@@ -69,7 +68,6 @@ export default async function LocaleLayout({
       <body
         className={`${sans.variable} ${mono.variable} ${serif.variable} relative antialiased`}
       >
-        <LanguageSwitcher />
         <main className="bg-background relative z-10 min-h-screen pb-24">
           {children}
         </main>
