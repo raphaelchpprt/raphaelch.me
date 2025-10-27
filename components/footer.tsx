@@ -7,40 +7,52 @@ import { cn } from "@/lib/utils";
 import { useCopyToClipboard } from "@/hooks";
 import { FC } from "react";
 
-export const Footer: FC = () => {
+const translations = {
+  fr: {
+    linkedin: "linkedin",
+    email: "email",
+    copied: "copié!",
+  },
+  en: {
+    linkedin: "linkedin",
+    email: "email",
+    copied: "copied!",
+  },
+};
+
+export const Footer: FC<{ locale: "en" | "fr" }> = ({ locale }) => {
+  const t = translations[locale];
+
   return (
     <footer className="sticky bottom-0 z-0 flex h-20 items-end justify-start overflow-y-hidden bg-black pb-2 text-white">
       <Marquee gap={96} duration={25} durationOnHover={0}>
-        <LinkedinLink />
-        <EmailLink />
+        <span className="font-serif text-6xl select-none">
+          {" "}
+          {t.linkedin}:{" "}
+          <Link
+            href={paths.linkedin}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="decoration-1 underline-offset-4 hover:underline"
+          >
+            /raphaelchappert
+          </Link>
+        </span>
+        <EmailLink copied={t.copied} label={t.email} />
       </Marquee>
     </footer>
   );
 };
 
-const LinkedinLink: FC = () => {
-  return (
-    <span className="font-serif text-6xl select-none">
-      {" "}
-      linkedin:{" "}
-      <Link
-        href={paths.linkedin}
-        rel="noopener noreferrer"
-        target="_blank"
-        className="decoration-1 underline-offset-4 hover:underline"
-      >
-        /raphaelchappert
-      </Link>
-    </span>
-  );
-};
-
-const EmailLink: FC = () => {
+const EmailLink: FC<{ copied: string; label: string }> = ({
+  copied,
+  label,
+}) => {
   const [copiedText, copy] = useCopyToClipboard();
 
   return (
     <span className="flex items-center gap-2 font-serif text-6xl select-none">
-      email:{" "}
+      {label}:{" "}
       <button
         onClick={() => copy("hi@raphaelch.me")}
         className="group grid cursor-pointer place-items-center"
@@ -48,7 +60,7 @@ const EmailLink: FC = () => {
         <span
           className={cn(
             "flex decoration-1 underline-offset-4 [grid-area:1/1] hover:underline",
-            copiedText ? "invisible" : "visible",
+            copiedText ? "invisible" : "visible"
           )}
         >
           hi@raphaelch.me
@@ -56,10 +68,10 @@ const EmailLink: FC = () => {
         <span
           className={cn(
             "invisible flex items-center gap-2 [grid-area:1/1]",
-            copiedText ? "visible" : "invisible",
+            copiedText ? "visible" : "invisible"
           )}
         >
-          copied!
+          {copied}
         </span>
       </button>
     </span>

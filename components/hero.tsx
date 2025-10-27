@@ -7,7 +7,12 @@ import { paths } from "@/constants";
 import { Link } from "@/components/link";
 import { motion } from "motion/react";
 
-export const Hero: FC = () => {
+interface HeroProps {
+  greeting: string;
+  name: string;
+}
+
+export const Hero: FC <HeroProps> = ({ greeting, name })=> {
   return (
     <div className="flex flex-col items-end">
       <motion.h1
@@ -19,8 +24,8 @@ export const Hero: FC = () => {
           opacity: { duration: 0.5 },
         }}
       >
-        salut, <br />
-        c&apos;est raphaël
+       {greeting} <br />
+        {name}
       </motion.h1>
 
       <motion.span

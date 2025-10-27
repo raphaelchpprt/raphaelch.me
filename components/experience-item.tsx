@@ -1,14 +1,20 @@
 "use client";
 
-import { useState, type FC } from "react";
-import type { Experience } from "@/lib/xp-data"; // Importez le type
+import { useState } from "react";
+import type { Experience } from "@/lib/xp-data-fr";
 import { cn } from "@/lib/utils";
 
-type ExperienceItemProps = {
+interface ExperienceItemProps {
   experience: Experience;
-};
+  showMoreLabel: string;
+  showLessLabel: string;
+}
 
-export const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
+export function ExperienceItem({ 
+  experience, 
+  showMoreLabel, 
+  showLessLabel 
+}: ExperienceItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpansion = () => {
@@ -52,7 +58,7 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
         onClick={toggleExpansion}
         className={`${isExpanded ? "text-muted-foreground" : "text-foreground"} -mt-2 self-start underline transition-colors hover:cursor-pointer hover:no-underline`}
       >
-        {isExpanded ? "voir moins" : "voir plus"}
+        {isExpanded ? showLessLabel : showMoreLabel}
       </button>
     </div>
   );
