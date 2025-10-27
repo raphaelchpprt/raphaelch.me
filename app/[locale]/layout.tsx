@@ -1,4 +1,3 @@
-// app/[locale]/layout.tsx
 import { getDictionary } from "@/hooks/use-translation";
 import { Golos_Text, JetBrains_Mono, DM_Serif_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";

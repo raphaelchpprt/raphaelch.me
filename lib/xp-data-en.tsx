@@ -1,4 +1,3 @@
-// lib/xp-data-en.tsx
 import React, { ReactNode } from "react";
 
 export type Experience = {

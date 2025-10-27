@@ -1,4 +1,3 @@
-// app/[locale]/page.tsx
 import { ElementType } from "react";
 import { InlineLink } from "@/components/link";
 import { SpinningText } from "@/components/spinning-text";

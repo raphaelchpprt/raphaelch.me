@@ -1,4 +1,3 @@
-// hooks/use-translation.ts
 type Locale = 'en' | 'fr';
 
 type TranslationKeys = {
