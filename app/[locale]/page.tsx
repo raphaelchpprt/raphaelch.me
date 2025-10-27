@@ -39,11 +39,12 @@ const stacks: { label: string; icon: ElementType }[] = [
 export default async function Home({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const dict = await getDictionary(params.locale as "en" | "fr");
+  const { locale } = await params;
+  const dict = await getDictionary(locale as "en" | "fr");
   const posts = await getBlogPosts();
-  const experiences = params.locale === "fr" ? experiencesFr : experiencesEn;
+  const experiences = locale === "fr" ? experiencesFr : experiencesEn;
 
   return (
     <div className="mx-auto flex max-w-screen-md flex-col gap-12 px-6 pt-24 font-mono">

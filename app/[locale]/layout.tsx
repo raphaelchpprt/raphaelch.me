@@ -3,6 +3,7 @@ import { Golos_Text, JetBrains_Mono, DM_Serif_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "@/components/footer";
 import "../globals.css";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 const sans = Golos_Text({
   subsets: ["latin"],
@@ -25,23 +26,24 @@ const serif = DM_Serif_Display({
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const dict = await getDictionary(params.locale as "en" | "fr");
+  const { locale } = await params;
+  const dict = await getDictionary(locale as "en" | "fr");
 
   return {
-    title: params.locale === "fr" ? "raphaelch.me" : "raphaelch.me - EN",
+    title: locale === "fr" ? "raphaelch.me" : "raphaelch.me - EN",
     description: dict.home.title,
     alternates: {
-      canonical: `https://raphaelch.me/${params.locale}`,
+      canonical: `https://raphaelch.me/${locale}`,
       languages: {
         fr: "https://raphaelch.me/fr",
         en: "https://raphaelch.me/en",
       },
     },
     openGraph: {
-      locale: params.locale,
-      alternateLocale: params.locale === "fr" ? "en" : "fr",
+      locale: locale,
+      alternateLocale: locale === "fr" ? "en" : "fr",
     },
     icons: {
       icon: [
@@ -53,22 +55,25 @@ export async function generateMetadata({
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
   return (
-    <html lang={params.locale} className="bg-black">
+    <html lang={locale} className="bg-black">
       <body
         className={`${sans.variable} ${mono.variable} ${serif.variable} relative antialiased`}
       >
+        <LanguageSwitcher />
         <main className="bg-background relative z-10 min-h-screen pb-24">
           {children}
         </main>
-        <Footer locale={params.locale as "en" | "fr"} />
+        <Footer locale={locale as "en" | "fr"} />
         <Analytics />
       </body>
     </html>
