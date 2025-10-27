@@ -49,7 +49,7 @@ export default async function Home({
   return (
     <div className="mx-auto flex max-w-screen-md flex-col gap-12 px-6 pt-24 font-mono">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-4">
-               {/* Mobile : spinning text à gauche du Hero */}
+               {/* Mobile */}
         <div className="sm:hidden -mt-8 -ml-6 flex items-center justify-between">
           <div className="-ml-18">
             <SpinningText
@@ -68,7 +68,7 @@ export default async function Home({
           </div>
         </div>
 
-        {/* Desktop : layout original avec hover */}
+        {/* Desktop */}
         <div className="hidden sm:flex group -mt-8 items-center justify-end gap-32">
           <SpinningText
             className="-mt-2 font-mono text-sm uppercase opacity-0 transition-opacity duration-750 group-hover:opacity-100"
