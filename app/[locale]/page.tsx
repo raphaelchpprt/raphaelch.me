@@ -171,7 +171,7 @@ export default async function Home({
             {dict.more.contact}{" "}
             <InlineLink href={paths.email}>{dict.more.mail}</InlineLink>,{" "}
             {dict.more.cv}{" "}
-            <InlineLink href={paths.cv}>{dict.more.here}</InlineLink>,{" "}
+            <InlineLink href={locale === "en" ? paths.cvEnglish : paths.cv}>{dict.more.here}</InlineLink>,{" "}
             {dict.more.projects}{" "}
             <InlineLink href={paths.github}>{dict.more.github}</InlineLink>
           </p>

@@ -9,4 +9,5 @@ export const paths = {
   malt: "https://www.malt.fr/profile/raphaelchappert",
   email: "mailto:hi@raphaelch.me",
   cv: "/cv-Raphael-CHAPPERT_fullstack-developer_website.pdf",
+  cvEnglish: "/cv-Raphael-CHAPPERT_fullstack-developer_website-en.pdf",
 };
