@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "greeting": "hey,",
+    "name": "it's raphaël"
+  },
+  "home": {
+    "spinningText": "craft • interface • design • greentech • ",
+    "title": "a fullstack developer",
+    "location": "based in biarritz",
+    "subtitle1": "with a strong taste for design and",
+    "subtitle1Bold": "user-centered products",
+    "description1": "eager to put technology, creativity, ergonomics and innovation",
+    "description1Bold": "at the service of the collective interest",
+    "description1End": "and society",
+    "description2": "always up for discussing design, GIS, green & low-tech, product development useful to all and designed for everyone"
+  },
+  "sections": {
+    "stacks": "stacks",
+    "experience": "experience",
+    "about": "background",
+    "notes": "notes",
+    "more": "more"
+  },
+  "experience": {
+    "showMore": "show more",
+    "showLess": "show less"
+  },
+  "about": {
+    "paragraph1": "after a master's degree in international relations, I worked for several years in organizations (United Nations, NGOs) as a web and digital communications officer",
+    "paragraph2": "I then turned to web development with a bootcamp and joined a greentech startup where I contributed for 4 years to the design of a carbon footprint SaaS",
+    "paragraph3": "today, I focus on developing tech products designed for both the user and to address social, ecological and digital challenges"
+  },
+  "more": {
+    "contact": "you can contact me by",
+    "mail": "email",
+    "cv": "my full resume is available",
+    "here": "here",
+    "projects": "you can also check out my projects on",
+    "github": "github",
+    "sourceCode": "source code"
+  },
+  "footer": {
+    "linkedin": "linkedin",
+    "email": "email",
+    "copied": "copied!"
+  }
+}

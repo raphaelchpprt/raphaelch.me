@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "greeting": "salut,",
+    "name": "c'est raphaël"
+  },
+  "home": {
+    "spinningText": "craft • interface • design • greentech • ",
+    "title": "développeur fullstack",
+    "location": "basé à biarritz",
+    "subtitle1": "avec un goût marqué pour le design et les",
+    "subtitle1Bold": "produits centrés utilisateur",
+    "description1": "désireux de mettre la technologie, la créativité, l'ergonomie et l'innovation",
+    "description1Bold": "au service de l'intérêt collectif",
+    "description1End": "et de la société",
+    "description2": "toujours partant pour discuter de design, de SIG, de green & low-tech, de développement produit utile à tous et pensé pour chacun"
+  },
+  "sections": {
+    "stacks": "stacks",
+    "experience": "expérience",
+    "about": "parcours",
+    "notes": "notes",
+    "more": "plus"
+  },
+  "about": {
+    "paragraph1": "après un master en relations internationales, j'ai travaillé plusieurs années au sein d'organisations (nations unies, ong) en tant que chargé de communication web et digitale",
+    "paragraph2": "je me suis ensuite orienté vers le développement web avec un bootcamp et j'ai rejoint une startup greentech où j'ai contribué pendant 4 ans à la conception d'un saas de bilan carbone",
+    "paragraph3": "aujourd'hui, je m'attache à développer des produits tech pensés aussi bien pour l'utilisateur que pour répondre aux défis sociaux, écologiques et numériques"
+  },
+  "experience": {
+    "showMore": "voir plus",
+    "showLess": "voir moins"
+  },
+  "more": {
+    "contact": "tu peux me contacter par",
+    "mail": "mail",
+    "cv": "mon cv complet s'affiche",
+    "here": "ici",
+    "projects": "tu peux aussi consulter mes projets sur",
+    "github": "github",
+    "sourceCode": "source code"
+  },
+  "footer": {
+    "linkedin": "linkedin",
+    "email": "email",
+    "copied": "copié!"
+  }
+}
