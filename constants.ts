@@ -1,6 +1,6 @@
 export const paths = {
   // internal
-  notes: (slug: string) => `/notes/${slug}`,
+  notes: (slug: string, locale: string) => `${locale}/notes/${slug}`,
 
   // external
   github: "https://github.com/raphaelchpprt",
