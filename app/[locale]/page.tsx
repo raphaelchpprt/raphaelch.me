@@ -43,7 +43,7 @@ export default async function Home({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale as "en" | "fr");
-  const posts = await getBlogPosts();
+  const posts = await getBlogPosts(locale);
   const experiences = locale === "fr" ? experiencesFr : experiencesEn;
 
   return (
@@ -146,7 +146,7 @@ export default async function Home({
               post.publish && (
                 <li key={post.slug}>
                   <Link
-                    href={paths.notes(post.slug)}
+                    href={paths.notes(post.slug, locale)}
                     className="group flex flex-col items-start gap-0"
                   >
                     <span className="group-hover:text-foreground text-accent font-semibold transition-colors duration-150">
@@ -179,7 +179,7 @@ export default async function Home({
           <p>
             <InlineLink
               href={paths.repo}
-              className="text-muted-foreground font-normal"
+              className="text-muted-foreground font-normal hover:text-accent"
             >
               {dict.more.sourceCode}
             </InlineLink>
