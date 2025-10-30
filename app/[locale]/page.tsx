@@ -1,4 +1,5 @@
 import { ElementType } from "react";
+import Image from "next/image";
 import { InlineLink } from "@/components/link";
 import { SpinningText } from "@/components/spinning-text";
 import { Hero } from "@/components/hero";
@@ -49,8 +50,8 @@ export default async function Home({
   return (
     <div className="mx-auto flex max-w-screen-md flex-col gap-12 px-6 pt-24 font-mono">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-4">
-               {/* Mobile */}
-        <div className="sm:hidden -mt-8 -ml-6 flex items-center justify-between">
+        {/* Mobile */}
+        <div className="-mt-8 -ml-6 flex items-center justify-between sm:hidden">
           <div className="-ml-18">
             <SpinningText
               className="font-mono text-sm uppercase"
@@ -69,7 +70,7 @@ export default async function Home({
         </div>
 
         {/* Desktop */}
-        <div className="hidden sm:flex group -mt-8 items-center justify-end gap-32">
+        <div className="group -mt-8 hidden items-center justify-end gap-32 sm:flex">
           <SpinningText
             className="-mt-2 font-mono text-sm uppercase opacity-0 transition-opacity duration-750 group-hover:opacity-100"
             radius={5.5}
@@ -87,8 +88,7 @@ export default async function Home({
         <div className="group mt-12 flex max-w-prose flex-col gap-6">
           <h2 className="text-balance">
             <strong>{dict.home.title}</strong> {dict.home.location}{" "}
-            {dict.home.subtitle1}{" "}
-            <strong>{dict.home.subtitle1Bold}</strong>
+            {dict.home.subtitle1} <strong>{dict.home.subtitle1Bold}</strong>
           </h2>
           <p className="text-balance">
             {dict.home.description1}{" "}
@@ -106,7 +106,10 @@ export default async function Home({
         <div className="flex flex-col gap-6">
           <p className="flex max-w-prose flex-wrap leading-loose text-pretty">
             {stacks.map(({ label, icon }, index) => (
-              <span key={`${label}-${index}`} className="mr-4 flex items-center space-x-2">
+              <span
+                key={`${label}-${index}`}
+                className="mr-4 flex items-center space-x-2"
+              >
                 <StackIcon icon={icon} />
                 <span>{label}</span>
               </span>
@@ -117,12 +120,39 @@ export default async function Home({
 
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">
-          {dict.sections.experience}
+          {dict.sections.notes}
         </h3>
-        {experiences.map((exp, index) => (
-          <ExperienceItem key={`${exp.company}-${index}`} experience={exp} showMoreLabel={dict.experience.showMore}
-            showLessLabel={dict.experience.showLess}/>
-        ))}
+        <ul className="flex flex-col">
+          {posts.map(
+            (post) =>
+              post.publish && (
+                <li key={post.slug}>
+                  <Link
+                    href={paths.notes(post.slug, locale)}
+                    className="group flex items-start gap-10"
+                  >
+                    <div className="flex flex-1 flex-col gap-0">
+                      <span className="group-hover:text-foreground text-accent font-semibold transition-colors duration-150">
+                        {post.title}
+                      </span>
+                      <span className="text-muted-foreground">
+                        {post.description.replace(/\.$/, "")}
+                      </span>
+                    </div>
+
+                    <div className="relative h-23 w-32 flex-shrink-0 overflow-hidden rounded-2xl transition-shadow duration-300 group-hover:shadow-xl">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                  </Link>
+                </li>
+              ),
+          )}
+        </ul>
       </div>
 
       <div>
@@ -138,28 +168,16 @@ export default async function Home({
 
       <div>
         <h3 className="text-accent mb-4 font-sans font-semibold">
-          {dict.sections.notes}
+          {dict.sections.experience}
         </h3>
-        <ul className="flex flex-col gap-6">
-          {posts.map(
-            (post) =>
-              post.publish && (
-                <li key={post.slug}>
-                  <Link
-                    href={paths.notes(post.slug, locale)}
-                    className="group flex flex-col items-start gap-0"
-                  >
-                    <span className="group-hover:text-foreground text-accent font-semibold transition-colors duration-150">
-                      {post.title}
-                    </span>
-                    <span className="text-muted-foreground">
-                      {post.description.replace(/\.$/, "")}
-                    </span>
-                  </Link>
-                </li>
-              ),
-          )}
-        </ul>
+        {experiences.map((exp, index) => (
+          <ExperienceItem
+            key={`${exp.company}-${index}`}
+            experience={exp}
+            showMoreLabel={dict.experience.showMore}
+            showLessLabel={dict.experience.showLess}
+          />
+        ))}
       </div>
 
       <div>
@@ -171,15 +189,17 @@ export default async function Home({
             {dict.more.contact}{" "}
             <InlineLink href={paths.email}>{dict.more.mail}</InlineLink>,{" "}
             {dict.more.cv}{" "}
-            <InlineLink href={locale === "en" ? paths.cvEnglish : paths.cv}>{dict.more.here}</InlineLink>,{" "}
-            {dict.more.projects}{" "}
+            <InlineLink href={locale === "en" ? paths.cvEnglish : paths.cv}>
+              {dict.more.here}
+            </InlineLink>
+            , {dict.more.projects}{" "}
             <InlineLink href={paths.github}>{dict.more.github}</InlineLink>
           </p>
 
           <p>
             <InlineLink
               href={paths.repo}
-              className="text-muted-foreground font-normal hover:text-accent"
+              className="text-muted-foreground hover:text-accent font-normal"
             >
               {dict.more.sourceCode}
             </InlineLink>
