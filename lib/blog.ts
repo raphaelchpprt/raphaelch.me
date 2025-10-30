@@ -5,6 +5,7 @@ export type Metadata = {
   slug: string;
   canonicalUrl: string;
   publish: boolean;
+  image: string;
   locale?: string;
 };
 
