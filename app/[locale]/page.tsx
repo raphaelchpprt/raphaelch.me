@@ -122,32 +122,34 @@ export default async function Home({
         <h3 className="text-accent mb-4 font-sans font-semibold">
           {dict.sections.notes}
         </h3>
-        <ul className="flex flex-col">
+        <ul className="flex flex-col gap-6">
           {posts.map(
             (post) =>
               post.publish && (
                 <li key={post.slug}>
                   <Link
                     href={paths.notes(post.slug, locale)}
-                    className="group flex items-start gap-10"
+                    className="group flex items-start gap-4 sm:gap-6"
                   >
                     <div className="flex flex-1 flex-col gap-0">
                       <span className="group-hover:text-foreground text-accent font-semibold transition-colors duration-150">
                         {post.title}
                       </span>
-                      <span className="text-muted-foreground">
+                      <span className="text-muted-foreground mt-2 sm:mt-0">
                         {post.description.replace(/\.$/, "")}
                       </span>
                     </div>
 
-                    <div className="relative h-23 w-32 flex-shrink-0 overflow-hidden rounded-2xl transition-shadow duration-300 group-hover:shadow-xl">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
+                    {post.image && (
+                      <div className="relative h-16 w-20 flex-shrink-0 overflow-hidden rounded-lg transition-shadow duration-300 group-hover:shadow-lg sm:h-22 sm:w-28">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    )}
                   </Link>
                 </li>
               ),
