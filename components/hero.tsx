@@ -1,7 +1,7 @@
 "use client";
 
 import { ElementType } from "react";
-import { GithubIcon, MaltIcon, LinkedInIcon } from "@/components/icons";
+import { GithubIcon, LinkedInIcon } from "@/components/icons";
 import { FC } from "react";
 import { paths } from "@/constants";
 import { Link } from "@/components/link";
@@ -12,7 +12,7 @@ interface HeroProps {
   name: string;
 }
 
-export const Hero: FC <HeroProps> = ({ greeting, name })=> {
+export const Hero: FC<HeroProps> = ({ greeting, name }) => {
   return (
     <div className="flex flex-col items-end">
       <motion.h1
@@ -24,7 +24,7 @@ export const Hero: FC <HeroProps> = ({ greeting, name })=> {
           opacity: { duration: 0.5 },
         }}
       >
-       {greeting} <br />
+        {greeting} <br />
         {name}
       </motion.h1>
 
@@ -45,7 +45,6 @@ export const Hero: FC <HeroProps> = ({ greeting, name })=> {
       >
         <SocialLink href={paths.github} icon={GithubIcon} />
         <SocialLink href={paths.linkedin} icon={LinkedInIcon} />
-        <SocialLink href={paths.malt} icon={MaltIcon} />
       </motion.ul>
     </div>
   );
