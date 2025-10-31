@@ -83,49 +83,67 @@ export const experiencesFr: Experience[] = [
     companyLogo: "/logos/medecins_du_monde_logo.jpg",
     dateRange: "2020 - 2021",
     companyDescription:
-      'médecins du monde est une organisation non gouvernementale internationale de solidarité médicale qui intervient auprès des populations vulnérables, en france et à l’international, pour garantir le droit fondamental à la santé',
+      "médecins du monde est une organisation non gouvernementale internationale de solidarité médicale qui intervient auprès des populations vulnérables, en france et à l'international, pour garantir le droit fondamental à la santé",
     missionDescription:
-      "mes missions étaient de contribuer à la refonte du site web institutionnel et d’améliorer la visibilité en ligne de l’organisation :",
+      "mes missions étaient de gérer la communication digitale de l'organisation, d'assurer la maintenance et l'évolution du site web, et d'accroître la visibilité en ligne :",
     achievements: [
       React.createElement(
         React.Fragment,
         null,
-        "participer à la refonte du site web institutionnel sous ",
+        "assurer la ",
         React.createElement(
           "span",
           { className: "text-accent font-semibold" },
-          "wordpress",
+          "gestion technique, l'actualisation et l'animation",
         ),
-        ", en collaboration avec une agence web, afin d’améliorer l’expérience utilisateur et la clarté de l’information",
+        " du site internet et des réseaux sociaux de l'organisation au quotidien",
       ),
       React.createElement(
         React.Fragment,
         null,
-        "optimiser le référencement naturel (",
+        "conduire la ",
+        React.createElement(
+          "span",
+          { className: "text-accent font-semibold" },
+          "refonte complète du site internet",
+        ),
+        " sous wordpress, en collaboration avec les agences prestataires, pour améliorer l'expérience utilisateur et moderniser l'interface",
+      ),
+      React.createElement(
+        React.Fragment,
+        null,
+        "suivre et analyser le ",
+        React.createElement(
+          "span",
+          { className: "text-accent font-semibold" },
+          "trafic du site internet",
+        ),
+        " et optimiser le référencement des contenus (",
         React.createElement(
           "span",
           { className: "text-accent font-semibold" },
           "seo",
         ),
-        ") du site web via des actions sur le contenu éditorial, la structure du site et les performances techniques",
+        ") pour accroître la visibilité en ligne",
       ),
       React.createElement(
         React.Fragment,
         null,
-        "gérer et animer les réseaux sociaux (",
+        "rédiger et envoyer la ",
         React.createElement(
           "span",
           { className: "text-accent font-semibold" },
-          "community management",
+          "newsletter mensuelle",
         ),
-        ") de l’organisation pour accroître l’engagement et la visibilité en ligne",
+        " et créer des campagnes d'",
+        React.createElement(
+          "span",
+          { className: "text-accent font-semibold" },
+          "emailing",
+        ),
+        " pour maintenir l'engagement de la communauté et promouvoir les actions de l'organisation",
       ),
-      React.createElement(
-        React.Fragment,
-        null,
-        "concevoir des supports de communication digitaux (bannières, infographies, newsletters) pour promouvoir les actions de l’organisation et sensibiliser le public aux enjeux de santé mondiale",
-      ),
-    ]
+    ],
   },
   {
     jobTitle: "chargé de communication web",
@@ -133,25 +151,31 @@ export const experiencesFr: Experience[] = [
     companyLogo: "/logos/surfrider_foundation_europe_logo.jpg",
     dateRange: "2019 - 2020",
     companyDescription:
-      "surfrider foundation europe est une organisation non gouvernementale dédiée à la protection et à la mise en valeur de l’océan, des vagues et du littoral par un réseau de militants passionnés",
+      "surfrider foundation europe est une organisation non gouvernementale dédiée à la protection et à la mise en valeur de l'océan, des vagues et du littoral par un réseau de militants passionnés",
     missionDescription:
-      "mes missions étaient de gérer la communication digitale et d’améliorer la visibilité en ligne de l’organisation :",
+      "mes missions étaient de gérer le lancement du nouveau site web et de développer une stratégie éditoriale pour améliorer la visibilité en ligne de l'organisation :",
     achievements: [
       React.createElement(
         React.Fragment,
         null,
-        "gérer et animer les réseaux sociaux (",
+        "lancer et animer le nouveau site web avec ",
         React.createElement(
           "span",
           { className: "text-accent font-semibold" },
-          "community management",
+          "production et mise en ligne d'articles de vulgarisation scientifique",
         ),
-        ") de l’organisation pour accroître l’engagement et la visibilité en ligne",
+        " optimisés seo pour la communication en ligne afin de sensibiliser le public aux enjeux environnementaux",
       ),
       React.createElement(
         React.Fragment,
         null,
-        "concevoir des supports de communication digitaux (bannières, infographies, newsletters) pour promouvoir les actions de l’organisation et sensibiliser le public aux enjeux environnementaux",
+        "définir la ",
+        React.createElement(
+          "span",
+          { className: "text-accent font-semibold" },
+          "stratégie éditoriale web",
+        ),
+        " à partir de la stratégie de communication globale de l'organisation",
       ),
       React.createElement(
         React.Fragment,
@@ -162,18 +186,7 @@ export const experiencesFr: Experience[] = [
           { className: "text-accent font-semibold" },
           "wordpress",
         ),
-        ", en collaboration avec une agence web, afin d’améliorer l’expérience utilisateur et la clarté de l’information",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
-        "optimiser le référencement naturel (",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "seo",
-        ),
-        ") du site web via des actions sur le contenu éditorial, la structure du site et les performances techniques",
+        ", en collaboration avec une agence web, afin d'améliorer l'expérience utilisateur et la clarté de l'information",
       ),
     ],
   },
@@ -185,23 +198,41 @@ export const experiencesFr: Experience[] = [
     companyDescription:
       "l'unesco est une agence spécialisée des nations unies qui vise à promouvoir la paix et la sécurité dans le monde par la coopération internationale dans les domaines de l'éducation, des sciences, de la culture et de la communication",
     missionDescription:
-      "mes missions étaient de gérer la communication, l’événementiel et les partenariats pour les programmes de l’organisation :",
+      "mes missions étaient de planifier et réaliser des projets de communication scientifique, ainsi que de créer des supports de communication pour promouvoir les programmes de l'organisation :",
     achievements: [
       React.createElement(
         React.Fragment,
         null,
-        "concevoir et mettre en œuvre des stratégies de communication pour promouvoir les programmes et les initiatives de l’organisation, en utilisant divers canaux (médias sociaux, communiqués de presse, newsletters, etc.)",
+        "planifier et réaliser des ",
+        React.createElement(
+          "span",
+          { className: "text-accent font-semibold" },
+          "projets et événements de communication scientifique",
+        ),
+        " pour sensibiliser le public aux enjeux mondiaux et promouvoir les actions de l'organisation",
       ),
       React.createElement(
         React.Fragment,
         null,
-        "organiser des événements (conférences, ateliers, séminaires) pour sensibiliser le public aux enjeux mondiaux et promouvoir les actions de l’organisation",
+        "créer, rédiger et développer des ",
+        React.createElement(
+          "span",
+          { className: "text-accent font-semibold" },
+          "supports de communication web et print",
+        ),
+        " pour promouvoir les programmes et initiatives de l'organisation",
       ),
-      React.createElement(        
+      React.createElement(
         React.Fragment,
         null,
-        "développer et entretenir des partenariats avec des organisations et des acteurs clés pour soutenir les programmes de l’organisation",
+        "développer et entretenir des ",
+        React.createElement(
+          "span",
+          { className: "text-accent font-semibold" },
+          "partenariats",
+        ),
+        " avec des organisations et des acteurs clés pour soutenir les programmes de l'organisation",
       ),
-    ]
-  }
+    ],
+  },
 ];
