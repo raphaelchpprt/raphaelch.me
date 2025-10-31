@@ -8,6 +8,7 @@ export type Experience = {
   companyDescription: string;
   missionDescription: string;
   achievements: ReactNode[];
+  video?: string;
 };
 
 export const experiencesFr: Experience[] = [
@@ -16,6 +17,7 @@ export const experiencesFr: Experience[] = [
     company: "impacti",
     dateRange: "2021 - 2025",
     companyLogo: "/logos/impacti_logo.jpg",
+    video: "ABmhncOah8k",
     companyDescription:
       'impacti est une start-up qui développe le saas "carbon", plateforme qui permet aux institutions, ong et entreprises de suivre l’évolution de leurs données d’émissions de CO2, de se fixer des objectifs de réduction et de les atteindre grâce à l’accompagnement d’une équipe interne d’experts',
     missionDescription:

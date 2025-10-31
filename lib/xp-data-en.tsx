@@ -8,6 +8,7 @@ export type Experience = {
   companyDescription: string;
   missionDescription: string;
   achievements: ReactNode[];
+  video?: string;
 };
 
 export const experiencesEn: Experience[] = [
@@ -15,6 +16,7 @@ export const experiencesEn: Experience[] = [
     jobTitle: "fullstack software developer",
     company: "impacti",
     companyLogo: "/logos/impacti_logo.jpg",
+    video: "ABmhncOah8k",
     dateRange: "2021 - 2025",
     companyDescription:
       'impacti is a start-up that develops the "carbon" saas platform, which allows institutions, ngos and companies to track the evolution of their CO2 emissions data, set reduction targets and achieve them with the support of an in-house team of experts',
