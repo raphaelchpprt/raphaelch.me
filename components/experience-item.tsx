@@ -1,10 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import type { Experience } from "@/lib/xp-data-fr";
+
+import { AchievementLineContent } from "@/components/achievement-line";
+import type { Experience } from "@/lib/experience-types";
 import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
+
 interface ExperienceItemProps {
   experience: Experience;
   showMoreLabel: string;
@@ -57,9 +60,17 @@ export function ExperienceItem({
             {experience.missionDescription}
           </p>
           <ul className="flex list-inside list-disc flex-col gap-4 text-pretty">
-            {experience.achievements.map((achievement, index) => (
-              <li key={`${achievement}-${index}`}>{achievement}</li>
-            ))}
+            {experience.achievements.map((achievement, index) => {
+              const slotKey = `${experience.company}-${index}`;
+              return (
+                <li key={slotKey}>
+                  <AchievementLineContent
+                    segments={achievement}
+                    slotKey={slotKey}
+                  />
+                </li>
+              );
+            })}
           </ul>
           {experience.video && (
             <div className="relative aspect-video w-full overflow-hidden rounded-4xl">

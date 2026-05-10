@@ -1,15 +1,6 @@
-import React, { ReactNode } from "react";
+import type { Experience } from "@/lib/experience-types";
 
-export type Experience = {
-  jobTitle: string;
-  company: string;
-  companyLogo: string;
-  dateRange: string;
-  companyDescription: string;
-  missionDescription: string;
-  achievements: ReactNode[];
-  video?: string;
-};
+export type { Experience };
 
 export const experiencesFr: Experience[] = [
   {
@@ -23,60 +14,32 @@ export const experiencesFr: Experience[] = [
     missionDescription:
       "mes missions étaient de contribuer au développement de l’interface et d’améliorer l’expérience utilisateur, tout en garantissant la fiabilité et la modernité graphique de l’outil :",
     achievements: [
-      React.createElement(
-        React.Fragment,
-        null,
+      [
         "développer et optimiser l’interface de gestion applicative de données carbones complexes à caractère scientifique et à forte volumétrie, en utilisant ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "react, node, redux et materialui",
-        ),
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+        {
+          highlight: "react, node, redux et materialui",
+        },
+      ],
+      [
         "construire des fonctionnalités ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "du backend au frontend",
-        ),
+        { highlight: "du backend au frontend" },
         ', comme un centre de notifications, un système de gestion des rôles et permissions via un système "macOs finder-like", et des tableaux de bord dynamiques pour la visualisation des données',
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "faire le lien entre l’équipe produit et une agence de design ux ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "mener la refonte ",
-        ),
+        { highlight: "mener la refonte " },
         "de l’interface et du parcours utilisateur, afin de rendre le produit plus simple à la prise en main et naturel à l'utilisation",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "contribuer au ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "design system ",
-        ),
+        { highlight: "design system " },
         "et à sa bibliothèque de composants (Storybook) pour assurer la cohérence visuelle de l'application et rendre le développement plus rapide et scalable.",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "participer à la maintenance et à l’évolution de la plateforme grâce à un environnement technique basé sur node, mongodb, docker, avec une gestion de projet selon les principes de la méthode ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "agile scrum",
-        ),
+        { highlight: "agile scrum" },
         ", via jira et bitbucket",
-      ),
+      ],
     ],
   },
   {
@@ -89,62 +52,34 @@ export const experiencesFr: Experience[] = [
     missionDescription:
       "mes missions étaient de gérer la communication digitale de l'organisation, d'assurer la maintenance et l'évolution du site web, et d'accroître la visibilité en ligne :",
     achievements: [
-      React.createElement(
-        React.Fragment,
-        null,
+      [
         "assurer la ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "gestion technique, l'actualisation et l'animation",
-        ),
+        {
+          highlight: "gestion technique, l'actualisation et l'animation",
+        },
         " du site internet et des réseaux sociaux de l'organisation au quotidien",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "conduire la ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "refonte complète du site internet",
-        ),
+        {
+          highlight: "refonte complète du site internet",
+        },
         " sous wordpress, en collaboration avec les agences prestataires, pour améliorer l'expérience utilisateur et moderniser l'interface",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "suivre et analyser le ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "trafic du site internet",
-        ),
+        { highlight: "trafic du site internet" },
         " et optimiser le référencement des contenus (",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "seo",
-        ),
+        { highlight: "seo" },
         ") pour accroître la visibilité en ligne",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "rédiger et envoyer la ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "newsletter mensuelle",
-        ),
+        { highlight: "newsletter mensuelle" },
         " et créer des campagnes d'",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "emailing",
-        ),
+        { highlight: "emailing" },
         " pour maintenir l'engagement de la communauté et promouvoir les actions de l'organisation",
-      ),
+      ],
     ],
   },
   {
@@ -157,39 +92,23 @@ export const experiencesFr: Experience[] = [
     missionDescription:
       "mes missions étaient de gérer le lancement du nouveau site web et de développer une stratégie éditoriale pour améliorer la visibilité en ligne de l'organisation :",
     achievements: [
-      React.createElement(
-        React.Fragment,
-        null,
+      [
         "lancer et animer le nouveau site web avec ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "production et mise en ligne d'articles de vulgarisation scientifique",
-        ),
+        {
+          highlight: "production et mise en ligne d'articles de vulgarisation scientifique",
+        },
         " optimisés seo pour la communication en ligne afin de sensibiliser le public aux enjeux environnementaux",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "définir la ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "stratégie éditoriale web",
-        ),
+        { highlight: "stratégie éditoriale web" },
         " à partir de la stratégie de communication globale de l'organisation",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "contribuer à la refonte du site web institutionnel sous ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "wordpress",
-        ),
+        { highlight: "wordpress" },
         ", en collaboration avec une agence web, afin d'améliorer l'expérience utilisateur et la clarté de l'information",
-      ),
+      ],
     ],
   },
   {
@@ -202,39 +121,23 @@ export const experiencesFr: Experience[] = [
     missionDescription:
       "mes missions étaient de planifier et réaliser des projets de communication scientifique, ainsi que de créer des supports de communication pour promouvoir les programmes de l'organisation :",
     achievements: [
-      React.createElement(
-        React.Fragment,
-        null,
+      [
         "planifier et réaliser des ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "projets et événements de communication scientifique",
-        ),
+        {
+          highlight: "projets et événements de communication scientifique",
+        },
         " pour sensibiliser le public aux enjeux mondiaux et promouvoir les actions de l'organisation",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "créer, rédiger et développer des ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "supports de communication web et print",
-        ),
+        { highlight: "supports de communication web et print" },
         " pour promouvoir les programmes et initiatives de l'organisation",
-      ),
-      React.createElement(
-        React.Fragment,
-        null,
+      ],
+      [
         "développer et entretenir des ",
-        React.createElement(
-          "span",
-          { className: "text-accent font-semibold" },
-          "partenariats",
-        ),
+        { highlight: "partenariats" },
         " avec des organisations et des acteurs clés pour soutenir les programmes de l'organisation",
-      ),
+      ],
     ],
   },
 ];

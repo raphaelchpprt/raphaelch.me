@@ -29,6 +29,7 @@ export default async function Page({
           src={metadata.image}
           alt={metadata.title}
           fill
+          sizes="(max-width: 768px) 100vw, 768px"
           className="object-cover"
           priority
         />

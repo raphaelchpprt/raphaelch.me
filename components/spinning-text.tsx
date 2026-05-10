@@ -102,7 +102,7 @@ export function SpinningText({
           {letters.map((letter, index) => (
             <motion.span
               aria-hidden="true"
-              key={`${index}-${letter}`}
+              key={index}
               variants={{
                 hidden: { opacity: 1 },
                 visible: { opacity: 1 },

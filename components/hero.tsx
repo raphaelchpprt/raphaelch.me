@@ -43,8 +43,8 @@ export const Hero: FC<HeroProps> = ({ greeting, name }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.2, delay: 0.15 }}
       >
-        <SocialLink href={paths.github} icon={GithubIcon} />
-        <SocialLink href={paths.linkedin} icon={LinkedInIcon} />
+        <SocialLink key={paths.github} href={paths.github} icon={GithubIcon} />
+        <SocialLink key={paths.linkedin} href={paths.linkedin} icon={LinkedInIcon} />
       </motion.ul>
     </div>
   );

@@ -22,7 +22,6 @@ export const POSTS = [
 ];
 
 export async function getBlogPosts(locale?: string): Promise<Metadata[]> {
-  console.log("🚀 ~ getBlogPosts ~ locale:", locale)
   const postsMetadata: Metadata[] = [];
   for (const post of POSTS) {
     const filePath = locale ? `${post.slug}.${locale}` : post.slug;
