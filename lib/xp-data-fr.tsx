@@ -44,7 +44,7 @@ export const experiencesFr: Experience[] = [
         ", avec notamment ",
         {
           highlight:
-            "react 18, remix 2, typescript, mantine, prisma, postgresql, clerk, conform + zod, react query, recharts, i18next",
+            "react router v7, remix 2, typescript, mantine, prisma, postgresql, clerk, conform + zod, react query, recharts, i18next",
         },
       ],
       [
