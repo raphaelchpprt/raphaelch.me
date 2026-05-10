@@ -31,7 +31,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale as "en" | "fr");
 
   return {
-    title: locale === "fr" ? "raphaelch.me" : "raphaelch.me - EN",
+    title: "raphaelch.me",
     description: dict.home.title,
     alternates: {
       canonical: `https://raphaelch.me/${locale}`,
