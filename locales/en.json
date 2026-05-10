@@ -9,14 +9,16 @@
     "location": "based in biarritz",
     "subtitle1": "with a strong taste for design and",
     "subtitle1Bold": "user-centered products",
-    "description1": "eager to put technology, creativity, ergonomics and innovation",
-    "description1Bold": "at the service of the collective interest",
+    "description1": "using technology, creativity, ergonomics and innovation",
+    "description1Bold": "to serve the collective interest",
     "description1End": "and society",
     "description2": "always up for discussing design, GIS, green & low-tech, product development useful to all and designed for everyone"
   },
   "sections": {
     "stacks": "stacks",
     "experience": "experience",
+    "developmentWeb": "development web",
+    "webCommunication": "web communication",
     "about": "background",
     "notes": "notes",
     "more": "more"

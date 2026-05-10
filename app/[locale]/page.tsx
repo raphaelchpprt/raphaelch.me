@@ -7,14 +7,23 @@ import { ExperienceItem } from "@/components/experience-item";
 import {
   ReactIcon,
   NextIcon,
+  RemixIcon,
+  ReactRouterIcon,
   TypescriptIcon,
+  ZodIcon,
   TailwindIcon,
-  NodeIcon,
   MaterialUiIcon,
-  JestIcon,
+  MantineIcon,
+  NodeIcon,
   MongodbIcon,
   PostgresqlIcon,
+  PrismaIcon,
+  RechartsIcon,
+  JestIcon,
+  PlaywrightIcon,
+  StorybookIcon,
   FigmaIcon,
+  WebflowIcon,
 } from "@/components/icons";
 import { paths } from "@/constants";
 import { getBlogPosts } from "@/lib/blog";
@@ -27,15 +36,27 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 const stacks: { label: string; icon: ElementType }[] = [
   { label: "react", icon: ReactIcon },
   { label: "next", icon: NextIcon },
+  { label: "remix 2", icon: RemixIcon },
+  { label: "react router v7", icon: ReactRouterIcon },
   { label: "typescript", icon: TypescriptIcon },
+  { label: "zod", icon: ZodIcon },
   { label: "tailwind", icon: TailwindIcon },
   { label: "materialui", icon: MaterialUiIcon },
-  { label: "jest", icon: JestIcon },
+  { label: "mantine", icon: MantineIcon },
   { label: "node", icon: NodeIcon },
   { label: "mongodb", icon: MongodbIcon },
   { label: "postgresql", icon: PostgresqlIcon },
+  { label: "prisma", icon: PrismaIcon },
+  { label: "recharts", icon: RechartsIcon },
+  { label: "jest", icon: JestIcon },
+  { label: "playwright", icon: PlaywrightIcon },
+  { label: "storybook", icon: StorybookIcon },
   { label: "figma", icon: FigmaIcon },
+  { label: "webflow", icon: WebflowIcon },
 ];
+
+const sectionTitleClassName =
+  "text-accent text-muted-foreground mb-4 font-semibold uppercase";
 
 export default async function Home({
   params,
@@ -85,7 +106,7 @@ export default async function Home({
           </div>
         </div>
 
-        <div className="group mt-12 flex max-w-prose flex-col gap-6">
+        <div className="group mt-12 flex max-w-prose flex-col gap-6 font-sans">
           <h2 className="text-balance">
             <strong>{dict.home.title}</strong> {dict.home.location}{" "}
             {dict.home.subtitle1} <strong>{dict.home.subtitle1Bold}</strong>
@@ -100,10 +121,8 @@ export default async function Home({
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">
-          {dict.sections.stacks}
-        </h3>
-        <div className="flex flex-col gap-6">
+        <h3 className={sectionTitleClassName}>{dict.sections.stacks}</h3>
+        <div className="flex flex-col gap-6 font-sans">
           <p className="flex max-w-prose flex-wrap leading-loose text-pretty">
             {stacks.map(({ label, icon }, index) => (
               <span
@@ -119,10 +138,8 @@ export default async function Home({
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">
-          {dict.sections.notes}
-        </h3>
-        <ul className="flex flex-col gap-6">
+        <h3 className={sectionTitleClassName}>{dict.sections.notes}</h3>
+        <ul className="flex flex-col gap-6 font-sans">
           {posts
             .filter((post) => post.publish)
             .map((post, thumbIndex) => (
@@ -159,10 +176,8 @@ export default async function Home({
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">
-          {dict.sections.about}
-        </h3>
-        <div className="flex flex-col gap-6">
+        <h3 className={sectionTitleClassName}>{dict.sections.about}</h3>
+        <div className="flex flex-col gap-6 font-sans">
           <p className="max-w-prose text-pretty">{dict.about.paragraph1}</p>
           <p className="max-w-prose text-pretty">{dict.about.paragraph2}</p>
           <p className="max-w-prose text-pretty">{dict.about.paragraph3}</p>
@@ -170,24 +185,49 @@ export default async function Home({
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">
-          {dict.sections.experience}
-        </h3>
-        {experiences.map((exp, index) => (
-          <ExperienceItem
-            key={`${exp.company}-${index}`}
-            experience={exp}
-            showMoreLabel={dict.experience.showMore}
-            showLessLabel={dict.experience.showLess}
-          />
-        ))}
+        <h3 className={sectionTitleClassName}>{dict.sections.experience}</h3>
+
+        <div className="font-sans">
+          <h4 className="text-muted-foreground mt-5 mb-3 text-sm uppercase">
+            {dict.sections.developmentWeb}
+          </h4>
+          {experiences
+            .filter(
+              (exp) =>
+                exp.type === "développement web" ||
+                exp.type === "software engineering",
+            )
+            .map((exp, index) => (
+              <ExperienceItem
+                key={`${exp.company}-${index}`}
+                experience={exp}
+                showMoreLabel={dict.experience.showMore}
+                showLessLabel={dict.experience.showLess}
+              />
+            ))}
+          <h4 className="text-muted-foreground mt-8 mb-3 text-sm uppercase">
+            {dict.sections.webCommunication}
+          </h4>
+          {experiences
+            .filter(
+              (exp) =>
+                exp.type === "communication web" ||
+                exp.type === "web communication",
+            )
+            .map((exp, index) => (
+              <ExperienceItem
+                key={`${exp.company}-${index}`}
+                experience={exp}
+                showMoreLabel={dict.experience.showMore}
+                showLessLabel={dict.experience.showLess}
+              />
+            ))}
+        </div>
       </div>
 
       <div>
-        <h3 className="text-accent mb-4 font-sans font-semibold">
-          {dict.sections.more}
-        </h3>
-        <div className="flex flex-col gap-6">
+        <h3 className={sectionTitleClassName}>{dict.sections.more}</h3>
+        <div className="flex flex-col gap-6 font-sans">
           <p className="max-w-prose text-pretty">
             {dict.more.contact}{" "}
             <InlineLink href={paths.email}>{dict.more.mail}</InlineLink>,{" "}

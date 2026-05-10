@@ -10,13 +10,13 @@ export function LanguageSwitcher() {
 
   const getLocalizedPath = (newLocale: string) => {
     if (!pathname) return `/${newLocale}`;
-    
+
     const pathnameWithoutLocale = pathname.replace(`/${currentLocale}`, "");
     return `/${newLocale}${pathnameWithoutLocale || ""}`;
   };
 
   return (
-    <div className="flex items-center gap-1 text-sm font-mono">
+    <div className="flex items-center gap-1 font-mono text-sm">
       {["fr", "en"].map((locale, index) => (
         <span key={locale}>
           {currentLocale === locale ? (
@@ -24,11 +24,11 @@ export function LanguageSwitcher() {
               {locale}
             </span>
           ) : (
-            <InlineLink href={getLocalizedPath(locale)}>
-              {locale}
-            </InlineLink>
+            <InlineLink href={getLocalizedPath(locale)}>{locale}</InlineLink>
           )}
-          {index === 0 && <span className="text-muted-foreground mx-1"> | </span>}
+          {index === 0 && (
+            <span className="text-muted-foreground mx-1"> | </span>
+          )}
         </span>
       ))}
     </div>

@@ -4,7 +4,72 @@ export type { Experience };
 
 export const experiencesEn: Experience[] = [
   {
-    jobTitle: "fullstack software developer",
+    type: "software engineering",
+    jobTitle: "product software engineer",
+    company: "kiosk",
+    companyLogo: "/logos/kiosk_logo.png",
+    dateRange: "2026 - today",
+    companyDescription:
+      "kiosk offers a b2b saas dedicated to environmental, social and governance (esg) topics and corporate sustainability reporting directive (csrd) compliance.",
+    missionDescription:
+      "my work spans product discovery and delivery, ux around sustainability data, and front-end architecture:",
+    achievements: [
+      [
+        "design, develop and optimize features for the ",
+        {
+          highlight: "esg and csrd-focused compliance platform",
+        },
+      ],
+      [
+        "work on ",
+        {
+          highlight: "carbon footprint module integration",
+        },
+        " and ",
+        {
+          highlight: "product design",
+        },
+        ", in collaboration with the product team and consulting",
+      ],
+      [
+        "shape ",
+        {
+          highlight: "ux",
+        },
+        " that helps teams understand and manage extra-financial data and csr objectives",
+      ],
+      [
+        "structure, maintain and evolve the ",
+        { highlight: "front-end architecture" },
+        ", including ",
+        {
+          highlight:
+            "react 18, remix 2, typescript, mantine, prisma, postgresql, clerk, conform + zod, react query, recharts, i18next",
+        },
+      ],
+      [
+        "integrate ",
+        {
+          highlight:
+            "anthropic sdk (claude ai), datocms, google cloud storage and scalingo",
+        },
+        "; quality and ops with ",
+        {
+          highlight:
+            "playwright, jest, storybook, sentry, pino, docker and github actions",
+        },
+      ],
+      [
+        "work on the ",
+        { highlight: "webflow showcase website" },
+        " for kiosk, including the design, technical integration, updates of the platform's showcase site, and ",
+        { highlight: "SEO/geo optimization" },
+      ],
+    ],
+  },
+  {
+    type: "software engineering",
+    jobTitle: "fullstack developer frontend oriented",
     company: "impacti",
     companyLogo: "/logos/impacti_logo.jpg",
     video: "ABmhncOah8k",
@@ -45,6 +110,7 @@ export const experiencesEn: Experience[] = [
     ],
   },
   {
+    type: "web communication",
     jobTitle: "web communication officer",
     company: "médecins du monde",
     companyLogo: "/logos/medecins_du_monde_logo.jpg",
@@ -85,6 +151,7 @@ export const experiencesEn: Experience[] = [
     ],
   },
   {
+    type: "web communication",
     jobTitle: "web communication officer",
     company: "surfrider foundation europe",
     companyLogo: "/logos/surfrider_foundation_europe_logo.jpg",
@@ -114,6 +181,7 @@ export const experiencesEn: Experience[] = [
     ],
   },
   {
+    type: "web communication",
     jobTitle: "communication, outreach and partnerships officer",
     company: "unesco",
     companyLogo: "/logos/unesco_logo.jpg",

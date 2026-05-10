@@ -1,4 +1,4 @@
-type Locale = 'en' | 'fr';
+type Locale = "en" | "fr";
 
 type TranslationKeys = {
   hero: {
@@ -19,6 +19,8 @@ type TranslationKeys = {
   sections: {
     stacks: string;
     experience: string;
+    developmentWeb: string;
+    webCommunication: string;
     about: string;
     notes: string;
     more: string;
@@ -49,8 +51,14 @@ type TranslationKeys = {
 };
 
 const dictionaries = {
-  en: () => import('@/locales/en.json').then((module) => module.default as TranslationKeys),
-  fr: () => import('@/locales/fr.json').then((module) => module.default as TranslationKeys),
+  en: () =>
+    import("@/locales/en.json").then(
+      (module) => module.default as TranslationKeys,
+    ),
+  fr: () =>
+    import("@/locales/fr.json").then(
+      (module) => module.default as TranslationKeys,
+    ),
 };
 
 export async function getDictionary(locale: Locale): Promise<TranslationKeys> {

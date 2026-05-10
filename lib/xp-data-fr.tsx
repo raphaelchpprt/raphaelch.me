@@ -4,7 +4,72 @@ export type { Experience };
 
 export const experiencesFr: Experience[] = [
   {
-    jobTitle: "développeur software fullstack",
+    type: "développement web",
+    jobTitle: "développeur fullstack orienté front",
+    company: "kiosk",
+    companyLogo: "/logos/kiosk_logo.png",
+    dateRange: "2026 - aujourd'hui",
+    companyDescription:
+      "kiosk propose un saas b2b dédié aux enjeux esg (environmental, social and governance) et à la conformité à la directive csrd (corporate sustainability reporting directive) sur le reporting de durabilité des entreprises.",
+    missionDescription:
+      "mes missions couvrent la conception produit, la livraison de fonctionnalités, l’expérience utilisateur autour des données de durabilité et l’architecture front-end :",
+    achievements: [
+      [
+        "concevoir, développer et optimiser des fonctionnalités pour la ",
+        {
+          highlight: "plateforme de conformité esg et csrd",
+        },
+      ],
+      [
+        "contribuer à l’",
+        {
+          highlight: "intégration d’un module bilan carbone",
+        },
+        " et à la ",
+        {
+          highlight: "conception produit",
+        },
+        ", en collaboration avec l'équipe produit et conseil",
+      ],
+      [
+        "travailler l’",
+        {
+          highlight: "ux",
+        },
+        " pour faciliter la compréhension et la gestion des données extra-financières et des objectifs rse",
+      ],
+      [
+        "structurer, maintenir et faire évoluer l’",
+        { highlight: "architecture front-end" },
+        ", avec notamment ",
+        {
+          highlight:
+            "react 18, remix 2, typescript, mantine, prisma, postgresql, clerk, conform + zod, react query, recharts, i18next",
+        },
+      ],
+      [
+        "intégrer ",
+        {
+          highlight:
+            "anthropic sdk (claude ai), datocms, google cloud storage et scalingo",
+        },
+        " ; qualité et exploitation avec ",
+        {
+          highlight:
+            "playwright, jest, storybook, sentry, pino, docker et github actions",
+        },
+      ],
+      [
+        "travailler sur le ",
+        { highlight: "site vitrine webflow" },
+        " pour kiosk, y compris le design, l'intégration technique, les mises à jour du site de présentation de la plateforme, et l'",
+        { highlight: "optimisation SEO/geo" },
+      ],
+    ],
+  },
+  {
+    type: "développement web",
+    jobTitle: "développeur fullstack orienté front",
     company: "impacti",
     dateRange: "2021 - 2025",
     companyLogo: "/logos/impacti_logo.jpg",
@@ -43,6 +108,7 @@ export const experiencesFr: Experience[] = [
     ],
   },
   {
+    type: "communication web",
     jobTitle: "chargé de communication web",
     company: "médecins du monde",
     companyLogo: "/logos/medecins_du_monde_logo.jpg",
@@ -83,6 +149,7 @@ export const experiencesFr: Experience[] = [
     ],
   },
   {
+    type: "communication web",
     jobTitle: "chargé de communication web",
     company: "surfrider foundation europe",
     companyLogo: "/logos/surfrider_foundation_europe_logo.jpg",
@@ -95,7 +162,8 @@ export const experiencesFr: Experience[] = [
       [
         "lancer et animer le nouveau site web avec ",
         {
-          highlight: "production et mise en ligne d'articles de vulgarisation scientifique",
+          highlight:
+            "production et mise en ligne d'articles de vulgarisation scientifique",
         },
         " optimisés seo pour la communication en ligne afin de sensibiliser le public aux enjeux environnementaux",
       ],
@@ -112,6 +180,7 @@ export const experiencesFr: Experience[] = [
     ],
   },
   {
+    type: "communication web",
     jobTitle: "chargé de communication, événementiel et partenariats",
     company: "unesco",
     companyLogo: "/logos/unesco_logo.jpg",

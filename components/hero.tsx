@@ -44,7 +44,11 @@ export const Hero: FC<HeroProps> = ({ greeting, name }) => {
         transition={{ duration: 0.2, delay: 0.15 }}
       >
         <SocialLink key={paths.github} href={paths.github} icon={GithubIcon} />
-        <SocialLink key={paths.linkedin} href={paths.linkedin} icon={LinkedInIcon} />
+        <SocialLink
+          key={paths.linkedin}
+          href={paths.linkedin}
+          icon={LinkedInIcon}
+        />
       </motion.ul>
     </div>
   );
@@ -61,9 +65,9 @@ const SocialLink = ({
     <li className="grid place-items-center">
       <Link
         href={href}
-        className="hover:bg-muted-background rounded-xl p-2 transition-colors duration-150"
+        className="group/icon hover:bg-muted-background rounded-xl p-2 transition-colors duration-150"
       >
-        <Icon className="text-muted-foreground size-4" />
+        <Icon className="text-muted-foreground group-hover/icon:text-foreground size-4 transition-colors duration-150" />
       </Link>
     </li>
   );
