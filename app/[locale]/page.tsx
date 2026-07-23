@@ -110,15 +110,18 @@ export default async function Home({
 
         <div className="group mt-12 flex max-w-prose flex-col gap-6 font-sans">
           <h2 className="text-balance">
-            <strong>{dict.home.title}</strong> {dict.home.location}{" "}
-            {dict.home.subtitle1} <strong>{dict.home.subtitle1Bold}</strong>
+            <strong>{dict.home.title}</strong> {dict.home.subtitle1}{" "}
+            <strong>{dict.home.subtitle1Bold}</strong>
           </h2>
           <p className="text-balance">
             {dict.home.description1}{" "}
             <strong>{dict.home.description1Bold}</strong>{" "}
             {dict.home.description1End}
           </p>
-          <p>{dict.home.description2}</p>
+          <p>
+            {dict.home.description2}{" "}
+            <strong>{dict.home.description2Bold}</strong>
+          </p>
         </div>
       </div>
 

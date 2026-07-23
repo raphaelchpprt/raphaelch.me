@@ -4,15 +4,15 @@
     "name": "it's raphaël"
   },
   "home": {
-    "spinningText": "craft • interface • design • greentech • ",
+    "spinningText": "product • interface • design • greentech • ",
     "title": "a fullstack developer",
-    "location": "based in biarritz",
     "subtitle1": "with a strong taste for design and",
     "subtitle1Bold": "user-centered products",
     "description1": "using technology, creativity, ergonomics and innovation",
     "description1Bold": "to serve the collective interest",
     "description1End": "and society",
-    "description2": "always up for discussing design, GIS, green & low-tech, product development useful to all and designed for everyone"
+    "description2": "always up for discussing design, GIS, green & low-tech, product development",
+    "description2Bold": "useful to all and designed for everyone"
   },
   "sections": {
     "stacks": "stacks",

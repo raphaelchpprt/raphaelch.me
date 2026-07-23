@@ -4,15 +4,15 @@
     "name": "c'est raphaël"
   },
   "home": {
-    "spinningText": "craft • interface • design • greentech • ",
+    "spinningText": "product • interface • design • greentech • ",
     "title": "développeur fullstack",
-    "location": "basé à biarritz",
     "subtitle1": "avec un goût marqué pour le design et les",
     "subtitle1Bold": "produits centrés utilisateur",
     "description1": "mettant la technologie, la créativité, l'ergonomie et l'innovation",
     "description1Bold": "au service de l'intérêt collectif",
     "description1End": "et de la société",
-    "description2": "toujours partant pour discuter de design, de SIG, de green & low-tech, de développement produit utile à tous et pensé pour chacun"
+    "description2": "toujours partant pour discuter de design, de SIG, de green & low-tech, de développement produit",
+    "description2Bold": "utile à tous et pensé pour chacun"
   },
   "sections": {
     "stacks": "stacks",

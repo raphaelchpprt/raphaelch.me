@@ -8,13 +8,13 @@ type TranslationKeys = {
   home: {
     spinningText: string;
     title: string;
-    location: string;
     subtitle1: string;
     subtitle1Bold: string;
     description1: string;
     description1Bold: string;
     description1End: string;
     description2: string;
+    description2Bold: string;
   };
   sections: {
     stacks: string;
