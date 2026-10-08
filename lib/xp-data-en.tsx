@@ -114,7 +114,7 @@ export const experiencesEn: Experience[] = [
     jobTitle: "web communication officer",
     company: "médecins du monde",
     companyLogo: "/logos/medecins_du_monde_logo.jpg",
-    dateRange: "2020 - 2021",
+    dateRange: "2021",
     companyDescription:
       "médecins du monde is an international non-governmental organization for medical solidarity that works with vulnerable populations, in france and internationally, to guarantee the fundamental right to health",
     missionDescription:
@@ -155,7 +155,7 @@ export const experiencesEn: Experience[] = [
     jobTitle: "web communication officer",
     company: "surfrider foundation europe",
     companyLogo: "/logos/surfrider_foundation_europe_logo.jpg",
-    dateRange: "2019 - 2020",
+    dateRange: "2019",
     companyDescription:
       "surfrider foundation europe is a non-governmental organization dedicated to the protection and enhancement of the ocean, waves and coastline through a network of passionate activists",
     missionDescription:
@@ -185,7 +185,7 @@ export const experiencesEn: Experience[] = [
     jobTitle: "communication, outreach and partnerships officer",
     company: "unesco",
     companyLogo: "/logos/unesco_logo.jpg",
-    dateRange: "2018 - 2019",
+    dateRange: "2018",
     companyDescription:
       "unesco is a specialized agency of the united nations that aims to promote peace and security in the world through international cooperation in the fields of education, science, culture and communication",
     missionDescription:

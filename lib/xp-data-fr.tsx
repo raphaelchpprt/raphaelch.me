@@ -112,7 +112,7 @@ export const experiencesFr: Experience[] = [
     jobTitle: "chargé de communication web",
     company: "médecins du monde",
     companyLogo: "/logos/medecins_du_monde_logo.jpg",
-    dateRange: "2020 - 2021",
+    dateRange: "2021",
     companyDescription:
       "médecins du monde est une organisation non gouvernementale internationale de solidarité médicale qui intervient auprès des populations vulnérables, en france et à l'international, pour garantir le droit fondamental à la santé",
     missionDescription:
@@ -153,7 +153,7 @@ export const experiencesFr: Experience[] = [
     jobTitle: "chargé de communication web",
     company: "surfrider foundation europe",
     companyLogo: "/logos/surfrider_foundation_europe_logo.jpg",
-    dateRange: "2019 - 2020",
+    dateRange: "2019",
     companyDescription:
       "surfrider foundation europe est une organisation non gouvernementale dédiée à la protection et à la mise en valeur de l'océan, des vagues et du littoral par un réseau de militants passionnés",
     missionDescription:
@@ -184,7 +184,7 @@ export const experiencesFr: Experience[] = [
     jobTitle: "chargé de communication, événementiel et partenariats",
     company: "unesco",
     companyLogo: "/logos/unesco_logo.jpg",
-    dateRange: "2018 - 2019",
+    dateRange: "2018",
     companyDescription:
       "l'unesco est une agence spécialisée des nations unies qui vise à promouvoir la paix et la sécurité dans le monde par la coopération internationale dans les domaines de l'éducation, des sciences, de la culture et de la communication",
     missionDescription:
