@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: "https://raphaelch.me/cv-Raphael-CHAPPERT_fullstack-developer_website_en.pdf",
+      url: "https://raphaelch.me/cv-Raphael-CHAPPERT_fullstack-developer_website-en.pdf",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.8,
